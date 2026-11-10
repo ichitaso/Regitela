@@ -1,0 +1,9 @@
+.theos/
+packages/
+Payload/
+*.ipa
+*.deb
+xcuserdata/
+DerivedData/
+build/
+.DS_Store

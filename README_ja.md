@@ -1,0 +1,80 @@
+<p align="center">
+  <img src="Regitela/Assets.xcassets/AppIcon.appiconset/AppIcon.png" width="128" alt="Regitela アイコン">
+</p>
+
+<h1 align="center">Regitela</h1>
+
+<p align="center">
+  <a href="https://github.com/forcequitOS/worse_query">worse_query</a> のサンドボックス脱出を利用した、iOS 向けのファイルエクスプローラー兼 Tweak ツールです。
+</p>
+
+## インストール
+
+> [!IMPORTANT]
+> **IPA は [Impactor](https://github.com/claration/impactor/releases) でインストールしてください。Sideloadly でインストールすると Regitela は動作しません。**
+>
+> Regitela が worse_query を使うには App Group の entitlement が必要です。Sideloadly はこれを外して署名するため、「no accessible app group」や「Couldn't get access to the container」のエラーで全機能が動きません。Impactor は App Group を残したまま署名します。
+
+1. [Releases](../../releases) ページから `Regitela_<version>.ipa` をダウンロードします。
+2. [Impactor](https://github.com/claration/impactor/releases) でインストールします。
+3. Regitela を開きます。ログタブに `app group: none` と表示された場合は、署名の際に App Group が外れています。Impactor でインストールし直してください。
+
+## ご利用の前に
+
+> [!WARNING]
+> **Regitela の使用は自己責任でお願いします。** 通常 iOS が触らせないファイルを編集するため、誤った編集でアプリや iOS が正常に動作しなくなることがあります。**必ず事前に端末のバックアップを取ってください。** 開発者は、いかなる損害やデータの損失についても責任を負いません。
+
+> [!CAUTION]
+> すでに MDM で管理されている端末では、監視モードを有効にしないでください。
+
+## 機能
+
+- **監視モード**: オン・オフを切り替えます。設定アプリを終了すると反映されます。
+- **地域**: MobileGestalt キャッシュの地域コードと販売地域を US (LL/A) に変更します。再起動で反映され、その後の再起動でも元に戻りません。元の値はバックアップされ、復元できます。
+- **ブラウズ**: App Group とシステムのコンテナを直接開きます。テキストファイルの編集・保存、新規作成、ファイルの削除ができます。
+- **コンテナ**: pathleak でアプリ、拡張機能、システムサービスのコンテナを探します。アプリ名またはバンドル ID で一覧表示され、どれでも開けます。
+- **詳細**: 任意のパスに使える、オリジナルの worse_query ツールです。サンドボックス拡張の保持、パスの内容の共有、パス以下のフォルダの一覧表示ができます。
+- Liquid Glass の UI、17言語に対応。
+
+## 対応バージョン
+
+| インストール方法 | iOS | 備考 |
+|---|---|---|
+| IPA（サイドロード） | 26.0 - 26.7.2、27.0 - 27.2 | 監視モード、地域、ブラウズには iOS 27 が必要 |
+
+> [!NOTE]
+> 記載のないバージョンには対応していません。今後の iOS アップデートで worse_query が修正される可能性があります。
+
+## ビルド
+
+[Theos](https://theos.dev) と Xcode 26 が必要です。
+
+```sh
+make package
+```
+
+このコマンドで、IPA と rootless 用の .deb の両方が `packages/` に作成されます。
+
+別の地域にしたい場合は、`Regitela/Region.swift` の `targetCountry`、`targetCode`、`targetRegion`（例: 日本は `J` と `J/A`、イギリスは `B` と `B/A`）を書き換えてビルドしてください。販売地域（RegionInfo）は、端末にすでにあるキーだけを書き換えます。iOS 27 では存在しないキーを追加すると、次の起動時に iOS がキャッシュを作り直してしまいます。
+
+## よくある質問
+
+1. **何も動作せず、ログタブに「no accessible app group」と表示される。**
+   App Group なしで署名されています。Sideloadly でインストールするとこうなります。[Impactor](https://github.com/claration/impactor/releases) でインストールし直してください。
+2. **iOS 26 で監視モード、地域、ブラウズが動作しない。**
+   これらには iOS 27 が必要です。iOS 26 では、worse_query で SystemGroup のコンテナにアクセスできません。
+3. **コンテナのスキャンに時間がかかる。**
+   pathleak は inode を総当たりで調べるため、初回のスキャンには時間がかかります。結果はアプリを終了するまで保持されます。
+4. **アプリ名ではなくバンドル ID で表示されるコンテナがある。**
+   サンドボックス内のアプリには、iOS が一部のアプリの名前しか教えないためです。
+5. **ログタブには何が表示される？**
+   アプリが何をしているか、何かが失敗した理由が表示されます。テキストを長押しするとコピーできます。
+
+## クレジット
+
+- [ichitaso](https://github.com/ichitaso): Regitela
+- [forcequit (Taj C)](https://github.com/forcequitOS): [worse_query](https://github.com/forcequitOS/worse_query) と pathleak。Regitela は worse_query をベースにしています。
+
+## ライセンス
+
+Regitela は worse_query と同じ [GPL-3.0](LICENSE) でライセンスされています。
