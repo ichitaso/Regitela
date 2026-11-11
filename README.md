@@ -61,13 +61,15 @@ To target a different region, edit `targetCountry`, `targetCode` and `targetRegi
 
 1. **Nothing works, and the Log tab shows "no accessible app group".**
    The app was signed without its App Group, which happens with Sideloadly. Reinstall it with [Impactor](https://github.com/claration/impactor/releases).
-2. **Supervised Mode, Region or Browse don't work on iOS 26.**
+2. **I built it with Xcode and get "Couldn't get access to the container (handle -1)".**
+   The App Group was not included when Xcode signed the app. In Signing & Capabilities, add an App Group registered to your team and make sure it is checked, then build again. Any group name works, because Regitela reads it from its entitlements. The Log tab should show `app group: <your group>`.
+3. **Supervised Mode, Region or Browse don't work on iOS 26.**
    They need iOS 27. On iOS 26, worse_query can't reach the SystemGroup containers.
-3. **The Containers scan takes a long time.**
+4. **The Containers scan takes a long time.**
    pathleak brute-forces inodes, so the first scan is slow. The results are kept until the app quits.
-4. **Some containers show a bundle ID instead of an app name.**
+5. **Some containers show a bundle ID instead of an app name.**
    iOS only gives a sandboxed app the names of some installed apps.
-5. **What does the Log tab show?**
+6. **What does the Log tab show?**
    It shows what the app is doing and why something failed. Long-press the text to copy it.
 
 ## Credits
