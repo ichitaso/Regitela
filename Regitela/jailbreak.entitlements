@@ -6,6 +6,8 @@
 	<array>
 		<string>group.com.ichitaso.regitela</string>
 	</array>
+	<key>com.apple.private.security.no-container</key>
+	<true/>
 	<key>com.apple.private.security.no-sandbox</key>
 	<true/>
 	<key>platform-application</key>
