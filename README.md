@@ -30,7 +30,7 @@
 ## Features
 
 - **Supervised Mode**: turn it on or off. Quit the Settings app to apply.
-- **Region**: change the region code and sales region in the MobileGestalt cache to US (LL/A). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
+- **Region**: change the region code and sales region in the MobileGestalt cache to a region chosen from a list (US LL/A by default; also JP, CN, HK, TW, KR, GB, DE, FR, CA, AU, SG, IN). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
 - **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, and delete files.
 - **Containers**: find the containers of apps, extensions and system services with pathleak. They are listed by app name or bundle ID, and you can open any of them.
 - **Advanced**: the original worse_query tools, which work on any path. You can hold a sandbox extension, share a path's contents and list the folders under a path.
@@ -55,7 +55,7 @@ make package
 
 This command creates both the IPA and the rootless .deb in `packages/`.
 
-To target a different region, edit `targetCountry`, `targetCode` and `targetRegion` in `Regitela/Region.swift` (for example `J` and `J/A` for Japan, or `B` and `B/A` for the UK) and rebuild. The sales region (RegionInfo) is changed only under the key the device already has: on iOS 27, adding a key that isn't there makes iOS rebuild the cache at the next boot.
+To add a region to the list, add an entry to `targetRegions` in `Regitela/Region.swift` (ISO country code and RegionCode, for example `JP` and `J`) and rebuild. The sales region (RegionInfo) is changed only under the key the device already has: on iOS 27, adding a key that isn't there makes iOS rebuild the cache at the next boot.
 
 ## FAQ
 

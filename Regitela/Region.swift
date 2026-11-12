@@ -1,9 +1,28 @@
 import SwiftUI
 
-// Region to switch to: display name, RegionCode and RegionInfo (e.g. Japan = J + J/A, UK = B + B/A)
-private let targetCountry = "US"
-private let targetCode = "LL"
-private let targetRegion = "LL/A"
+// Regions to switch to: ISO country code (for the display name), RegionCode and RegionInfo
+private struct TargetRegion: Hashable {
+    let country: String
+    let code: String
+    var region: String { code + "/A" }
+    var name: String { Locale.current.localizedString(forRegionCode: country) ?? country }
+}
+
+private let targetRegions = [
+    TargetRegion(country: "US", code: "LL"),
+    TargetRegion(country: "JP", code: "J"),
+    TargetRegion(country: "CN", code: "CH"),
+    TargetRegion(country: "HK", code: "ZP"),
+    TargetRegion(country: "TW", code: "TA"),
+    TargetRegion(country: "KR", code: "KH"),
+    TargetRegion(country: "GB", code: "B"),
+    TargetRegion(country: "DE", code: "D"),
+    TargetRegion(country: "FR", code: "FN"),
+    TargetRegion(country: "CA", code: "C"),
+    TargetRegion(country: "AU", code: "X"),
+    TargetRegion(country: "SG", code: "ZA"),
+    TargetRegion(country: "IN", code: "HN"),
+]
 
 private let gestaltPlist = ContainerPlist(
     container: "/private/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache",
@@ -37,9 +56,14 @@ struct RegionView: View {
     }
 
     @State private var hasRegionKey = false
+    @AppStorage("RegionTarget") private var targetCode = "LL"
+
+    private var target: TargetRegion {
+        targetRegions.first { $0.code == targetCode } ?? targetRegions[0]
+    }
 
     private var isApplied: Bool {
-        country == targetCode && (!hasRegionKey || region == targetRegion)
+        country == target.code && (!hasRegionKey || region == target.region)
     }
 
     var body: some View {
@@ -57,7 +81,10 @@ struct RegionView: View {
             }
 
             Section {
-                Button("Change Region to \(targetCountry) (\(targetRegion))") { apply() }
+                Picker("Region", selection: $targetCode) {
+                    ForEach(targetRegions, id: \.code) { Text(verbatim: "\($0.name) (\($0.region))").tag($0.code) }
+                }
+                Button("Change Region to \(target.name) (\(target.region))") { apply() }
                     .disabled(!loaded || isApplied)
                 Button("Restore Original", role: .destructive) { restore() }
                     .disabled(!loaded || !hasBackup)
@@ -130,8 +157,8 @@ struct RegionView: View {
     private func apply() {
         do {
             try modifyCacheExtra { extra, original in
-                var changes = [countryKey: targetCode]
-                if let key = regionKey(in: extra) { changes[key] = targetRegion }
+                var changes = [countryKey: target.code]
+                if let key = regionKey(in: extra) { changes[key] = target.region }
                 // Record each key's original value the first time it is changed ("" = it was absent)
                 var backup = UserDefaults.standard.dictionary(forKey: backupDefaultsKey) as? [String: String] ?? [:]
                 for key in changes.keys where backup[key] == nil {
@@ -143,7 +170,7 @@ struct RegionView: View {
                 }
                 extra.merge(changes) { _, new in new }
             }
-            report(String(localized: "Changed to \(targetCountry) (\(targetRegion)). Reboot to apply."), failed: false)
+            report(String(localized: "Changed to \(target.name) (\(target.region)). Reboot to apply."), failed: false)
         } catch {
             report(String(localized: "Failed to change: \(error.localizedDescription)"), failed: true)
         }
