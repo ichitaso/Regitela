@@ -13,6 +13,10 @@
 - (NSURL *)URL;
 @end
 
+@interface UIImage (Regitela_Private)
++ (UIImage *)_applicationIconImageForBundleIdentifier:(NSString *)bundleIdentifier format:(int)format scale:(CGFloat)scale;
+@end
+
 static NSString *nameFromBundleURL(NSURL *bundleURL) {
     if (!bundleURL) return nil;
     NSDictionary *info = [NSDictionary dictionaryWithContentsOfURL:[bundleURL URLByAppendingPathComponent:@"Info.plist"]];
@@ -91,4 +95,10 @@ NSDictionary<NSString *, NSString *> *copyBundleDisplayNames(void) {
         if (bundleID.length > 0 && name.length > 0) map[bundleID] = name;
     }
     return map;
+}
+
+UIImage *copyIconForBundleID(NSString *bundleID) {
+    if (bundleID.length == 0) return nil;
+    if (![UIImage respondsToSelector:@selector(_applicationIconImageForBundleIdentifier:format:scale:)]) return nil;
+    return [UIImage _applicationIconImageForBundleIdentifier:bundleID format:2 scale:UITraitCollection.currentTraitCollection.displayScale];
 }

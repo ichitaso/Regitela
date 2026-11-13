@@ -42,16 +42,20 @@ struct ContainerListView: View {
                 NavigationLink {
                     FileExplorerView(root: container.path)
                 } label: {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(title(for: container))
-                        Text(subtitle(for: container))
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                    Label {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(title(for: container))
+                            Text(subtitle(for: container))
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    } icon: {
+                        ContainerIcon(identifier: container.identifier)
                     }
                 }
             }
         }
-        .searchable(text: $search)
+        .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle((parent as NSString).lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

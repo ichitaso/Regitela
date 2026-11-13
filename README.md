@@ -31,7 +31,7 @@
 
 - **Supervised Mode**: turn it on or off. Quit the Settings app to apply.
 - **Region**: change the region code and sales region in the MobileGestalt cache to a region chosen from a list (US LL/A by default; also JP, CN, HK, TW, KR, GB, DE, FR, CA, AU, SG, IN, VN). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
-- **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, and delete files.
+- **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, and delete files. Long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Folders of apps show the app icon, and a search bar filters the list.
 - **Containers**: find the containers of apps, extensions and system services with pathleak. They are listed by app name or bundle ID, and you can open any of them.
 - **Advanced**: the original worse_query tools, which work on any path. You can hold a sandbox extension, share a path's contents and list the folders under a path.
 - Liquid Glass UI, localized into 17 languages.

@@ -17,7 +17,7 @@ struct HelpView: View {
             topic("Region", systemImage: "globe",
                   "Changes the country and region code in the MobileGestalt cache to US (LL/A). Reboot to apply; the change stays after later reboots. Restore Original puts back the values saved before the first change.")
             topic("Browse", systemImage: "folder",
-                  "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, and use the ••• menu to create a new text file.")
+                  "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, or long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Use the ••• menu to paste or to create a new text file.")
             topic("Containers", systemImage: "shippingbox",
                   "Finds the containers of apps, extensions and system services with pathleak, and lists them by app name or bundle ID. The first scan takes a while; the results are kept until the app quits. Tap one to browse it, or search by name.")
             topic("Advanced", systemImage: "wrench.and.screwdriver",

@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 let accessibleGroup: String? = worse_query_group()
 
@@ -71,6 +71,15 @@ func displayName(forIdentifier identifier: String) -> String? {
     }
     displayNameCache[identifier] = .some(name)
     return name
+}
+
+private var iconCache: [String: UIImage?] = [:]
+
+func appIcon(forIdentifier identifier: String) -> UIImage? {
+    if let cached = iconCache[identifier] { return cached }
+    let icon = displayName(forIdentifier: identifier) != nil ? copyIconForBundleID(identifier) : nil
+    iconCache[identifier] = .some(icon)
+    return icon
 }
 
 func containerLabel(forIdentifier identifier: String) -> String {

@@ -2015,6 +2015,112 @@
         }
       }
     },
+    "Compress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ضغط"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Komprimieren"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compress"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compresser"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kompres"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圧縮"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "압축"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimeer"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сжать"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บีบอัด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sıkıştır"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nén"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "壓縮"
+          }
+        }
+      }
+    },
     "Consume Sandbox Extension": {
       "localizations": {
         "ar": {
@@ -2223,6 +2329,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "容器"
+          }
+        }
+      }
+    },
+    "Copy": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسخ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopieren"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salin"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コピー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복사"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopieer"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Копировать"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คัดลอก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopyala"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sao chép"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷貝"
           }
         }
       }
@@ -3287,6 +3499,112 @@
         }
       }
     },
+    "Extract": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استخراج"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entpacken"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extract"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extraer"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extraire"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ekstrak"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estrai"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "展開"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "압축 해제"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pak uit"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extrair"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Распаковать"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แตกไฟล์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çıkart"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giải nén"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解压缩"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解壓縮"
+          }
+        }
+      }
+    },
     "Failed to change: %@": {
       "localizations": {
         "ar": {
@@ -3389,6 +3707,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "變更失敗：%@"
+          }
+        }
+      }
+    },
+    "Failed to compress %@: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشل ضغط %1$@: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ komprimieren fehlgeschlagen: %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to compress %1$@: %2$@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al comprimir %1$@: %2$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de la compression de %1$@ : %2$@"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gagal mengompres %1$@: %2$@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile comprimere %1$@: %2$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ の圧縮に失敗しました: %2$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ 압축 실패: %2$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimeren van %1$@ mislukt: %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao comprimir %1$@: %2$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось сжать %1$@: %2$@"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บีบอัด %1$@ ไม่สำเร็จ: %2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ sıkıştırılamadı: %2$@"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nén %1$@ thất bại: %2$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩 %1$@ 失败：%2$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "壓縮 %1$@ 失敗：%2$@"
           }
         }
       }
@@ -3605,6 +4029,218 @@
         }
       }
     },
+    "Failed to extract %@: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشل استخراج %1$@: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ entpacken fehlgeschlagen: %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to extract %1$@: %2$@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al extraer %1$@: %2$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l'extraction de %1$@ : %2$@"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gagal mengekstrak %1$@: %2$@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile estrarre %1$@: %2$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ の展開に失敗しました: %2$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ 압축 해제 실패: %2$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uitpakken van %1$@ mislukt: %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao extrair %1$@: %2$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось распаковать %1$@: %2$@"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แตกไฟล์ %1$@ ไม่สำเร็จ: %2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ çıkartılamadı: %2$@"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giải nén %1$@ thất bại: %2$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解压缩 %1$@ 失败：%2$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解壓縮 %1$@ 失敗：%2$@"
+          }
+        }
+      }
+    },
+    "Failed to paste %@: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشل لصق %1$@: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ einsetzen fehlgeschlagen: %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to paste %1$@: %2$@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al pegar %1$@: %2$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec du collage de %1$@ : %2$@"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gagal menempel %1$@: %2$@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile incollare %1$@: %2$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ のペーストに失敗しました: %2$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ 붙여넣기 실패: %2$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plakken van %1$@ mislukt: %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao colar %1$@: %2$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось вставить %1$@: %2$@"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วาง %1$@ ไม่สำเร็จ: %2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ yapıştırılamadı: %2$@"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dán %1$@ thất bại: %2$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴 %1$@ 失败：%2$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "貼上 %1$@ 失敗：%2$@"
+          }
+        }
+      }
+    },
     "Failed to read directory: %@": {
       "localizations": {
         "ar": {
@@ -3813,6 +4449,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "讀取失敗：%@"
+          }
+        }
+      }
+    },
+    "Failed to rename %@: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فشلت إعادة تسمية %1$@: %2$@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ umbenennen fehlgeschlagen: %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to rename %1$@: %2$@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al renombrar %1$@: %2$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec du renommage de %1$@ : %2$@"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gagal mengganti nama %1$@: %2$@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile rinominare %1$@: %2$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ の名前変更に失敗しました: %2$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ 이름 변경 실패: %2$@"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naam wijzigen van %1$@ mislukt: %2$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao renomear %1$@: %2$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось переименовать %1$@: %2$@"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลี่ยนชื่อ %1$@ ไม่สำเร็จ: %2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ yeniden adlandırılamadı: %2$@"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đổi tên %1$@ thất bại: %2$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名 %1$@ 失败：%2$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新命名 %1$@ 失敗：%2$@"
           }
         }
       }
@@ -4983,6 +5725,112 @@
         }
       }
     },
+    "Move": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نقل"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewegen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déplacer"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pindahkan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sposta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移動"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이동"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verplaats"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переместить"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ย้าย"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taşı"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Di chuyển"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移动"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搬移"
+          }
+        }
+      }
+    },
     "Name": {
       "localizations": {
         "ar": {
@@ -5831,108 +6679,214 @@
         }
       }
     },
-    "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, and use the ••• menu to create a new text file.": {
+    "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, or long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Use the ••• menu to paste or to create a new text file.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يفتح حاويات App Group والنظام مباشرة. اضغط على مجلد لفتحه أو على ملف نصي لتعديله وحفظه. اسحب لليسار للحذف، واستخدم القائمة ••• لإنشاء ملف نصي جديد."
+            "value": "يفتح حاويات App Group والنظام مباشرة. اضغط على مجلد لفتحه أو على ملف نصي لتعديله وحفظه. اسحب لليسار للحذف، أو اضغط مطولًا على عنصر لإعادة تسميته أو نسخه أو نقله أو ضغطه أو مشاركته، أو لاستخراج ملف zip. استخدم القائمة ••• للصق أو لإنشاء ملف نصي جديد."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Öffnet App-Group- und Systemcontainer direkt. Tippe auf einen Ordner, um ihn zu öffnen, oder auf eine Textdatei, um sie zu bearbeiten und zu sichern. Nach links wischen zum Löschen; über das •••-Menü legst du eine neue Textdatei an."
+            "value": "Öffnet App-Group- und Systemcontainer direkt. Tippe auf einen Ordner, um ihn zu öffnen, oder auf eine Textdatei, um sie zu bearbeiten und zu sichern. Nach links wischen zum Löschen; lange drücken zum Umbenennen, Kopieren, Bewegen, Komprimieren oder Teilen sowie zum Entpacken einer ZIP-Datei. Über das •••-Menü setzt du ein oder legst eine neue Textdatei an."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, and use the ••• menu to create a new text file."
+            "value": "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, or long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Use the ••• menu to paste or to create a new text file."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abre directamente los contenedores de App Group y del sistema. Toca una carpeta para abrirla o un archivo de texto para editarlo y guardarlo. Desliza a la izquierda para eliminar y usa el menú ••• para crear un archivo de texto nuevo."
+            "value": "Abre directamente los contenedores de App Group y del sistema. Toca una carpeta para abrirla o un archivo de texto para editarlo y guardarlo. Desliza a la izquierda para eliminar o mantén pulsado un elemento para renombrarlo, copiarlo, moverlo, comprimirlo o compartirlo, o para extraer un archivo zip. Usa el menú ••• para pegar o crear un archivo de texto nuevo."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ouvre directement les conteneurs App Group et système. Touchez un dossier pour l'ouvrir ou un fichier texte pour le modifier et l'enregistrer. Balayez vers la gauche pour supprimer, et utilisez le menu ••• pour créer un fichier texte."
+            "value": "Ouvre directement les conteneurs App Group et système. Touchez un dossier pour l'ouvrir ou un fichier texte pour le modifier et l'enregistrer. Balayez vers la gauche pour supprimer, ou touchez longuement un élément pour le renommer, le copier, le déplacer, le compresser ou le partager, ou pour extraire un fichier zip. Utilisez le menu ••• pour coller ou créer un fichier texte."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Membuka kontainer App Group dan sistem secara langsung. Ketuk folder untuk membukanya atau file teks untuk mengedit dan menyimpannya. Geser ke kiri untuk menghapus, dan gunakan menu ••• untuk membuat file teks baru."
+            "value": "Membuka kontainer App Group dan sistem secara langsung. Ketuk folder untuk membukanya atau file teks untuk mengedit dan menyimpannya. Geser ke kiri untuk menghapus, atau tekan lama item untuk mengganti nama, menyalin, memindahkan, mengompres, atau membagikannya, atau untuk mengekstrak file zip. Gunakan menu ••• untuk menempel atau membuat file teks baru."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Apre direttamente i contenitori App Group e di sistema. Tocca una cartella per aprirla o un file di testo per modificarlo e salvarlo. Scorri a sinistra per eliminare e usa il menu ••• per creare un nuovo file di testo."
+            "value": "Apre direttamente i contenitori App Group e di sistema. Tocca una cartella per aprirla o un file di testo per modificarlo e salvarlo. Scorri a sinistra per eliminare, o tieni premuto un elemento per rinominarlo, copiarlo, spostarlo, comprimerlo o condividerlo, o per estrarre un file zip. Usa il menu ••• per incollare o creare un nuovo file di testo."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "App Group とシステムのコンテナを直接開きます。フォルダをタップすると開き、テキストファイルをタップすると編集・保存できます。左にスワイプで削除、••• メニューから新しいテキストファイルを作成できます。"
+            "value": "App Group とシステムのコンテナを直接開きます。フォルダをタップすると開き、テキストファイルをタップすると編集・保存できます。左にスワイプで削除、長押しで名前変更・コピー・移動・圧縮・共有、zip ファイルの展開ができます。••• メニューからペーストや新しいテキストファイルの作成ができます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "App Group과 시스템 컨테이너를 바로 엽니다. 폴더를 탭하면 열리고, 텍스트 파일을 탭하면 편집하고 저장할 수 있습니다. 왼쪽으로 쓸어 삭제하고, ••• 메뉴에서 새 텍스트 파일을 만들 수 있습니다."
+            "value": "App Group과 시스템 컨테이너를 바로 엽니다. 폴더를 탭하면 열리고, 텍스트 파일을 탭하면 편집하고 저장할 수 있습니다. 왼쪽으로 쓸어 삭제하고, 항목을 길게 눌러 이름 변경, 복사, 이동, 압축, 공유를 하거나 zip 파일의 압축을 해제할 수 있습니다. ••• 메뉴에서 붙여넣기를 하거나 새 텍스트 파일을 만들 수 있습니다."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Opent de App Group- en systeemcontainers direct. Tik op een map om die te openen of op een tekstbestand om het te wijzigen en te bewaren. Veeg naar links om te verwijderen en gebruik het •••-menu om een nieuw tekstbestand aan te maken."
+            "value": "Opent de App Group- en systeemcontainers direct. Tik op een map om die te openen of op een tekstbestand om het te wijzigen en te bewaren. Veeg naar links om te verwijderen, of houd een onderdeel ingedrukt om de naam te wijzigen, het te kopiëren, te verplaatsen, te comprimeren of te delen, of om een zip-bestand uit te pakken. Gebruik het •••-menu om te plakken of een nieuw tekstbestand aan te maken."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Abre diretamente os contêineres de App Group e do sistema. Toque numa pasta para abri-la ou num arquivo de texto para editá-lo e salvá-lo. Deslize para a esquerda para apagar e use o menu ••• para criar um novo arquivo de texto."
+            "value": "Abre diretamente os contêineres de App Group e do sistema. Toque numa pasta para abri-la ou num arquivo de texto para editá-lo e salvá-lo. Deslize para a esquerda para apagar, ou toque e segure um item para renomear, copiar, mover, comprimir ou compartilhar, ou para extrair um arquivo zip. Use o menu ••• para colar ou criar um novo arquivo de texto."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Открывает контейнеры App Group и системные контейнеры напрямую. Нажмите на папку, чтобы открыть её, или на текстовый файл, чтобы изменить и сохранить его. Смахните влево для удаления; через меню ••• можно создать новый текстовый файл."
+            "value": "Открывает контейнеры App Group и системные контейнеры напрямую. Нажмите на папку, чтобы открыть её, или на текстовый файл, чтобы изменить и сохранить его. Смахните влево для удаления или нажмите и удерживайте объект, чтобы переименовать, скопировать, переместить, сжать его или поделиться им, а также чтобы распаковать zip-файл. Через меню ••• можно вставить объект или создать новый текстовый файл."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "เปิดคอนเทนเนอร์ App Group และคอนเทนเนอร์ระบบโดยตรง แตะโฟลเดอร์เพื่อเปิด หรือแตะไฟล์ข้อความเพื่อแก้ไขและบันทึก ปัดไปทางซ้ายเพื่อลบ และใช้เมนู ••• เพื่อสร้างไฟล์ข้อความใหม่"
+            "value": "เปิดคอนเทนเนอร์ App Group และคอนเทนเนอร์ระบบโดยตรง แตะโฟลเดอร์เพื่อเปิด หรือแตะไฟล์ข้อความเพื่อแก้ไขและบันทึก ปัดไปทางซ้ายเพื่อลบ หรือแตะค้างที่รายการเพื่อเปลี่ยนชื่อ คัดลอก ย้าย บีบอัด หรือแชร์ หรือแตกไฟล์ zip ใช้เมนู ••• เพื่อวางหรือสร้างไฟล์ข้อความใหม่"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "App Group ve sistem kapsayıcılarını doğrudan açar. Açmak için bir klasöre, düzenleyip kaydetmek için bir metin dosyasına dokunun. Silmek için sola kaydırın ve yeni bir metin dosyası oluşturmak için ••• menüsünü kullanın."
+            "value": "App Group ve sistem kapsayıcılarını doğrudan açar. Açmak için bir klasöre, düzenleyip kaydetmek için bir metin dosyasına dokunun. Silmek için sola kaydırın; yeniden adlandırmak, kopyalamak, taşımak, sıkıştırmak veya paylaşmak ya da bir zip dosyasını çıkartmak için bir öğeye uzun basın. Yapıştırmak veya yeni bir metin dosyası oluşturmak için ••• menüsünü kullanın."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mở trực tiếp các container App Group và hệ thống. Chạm vào thư mục để mở, chạm vào tệp văn bản để sửa và lưu. Vuốt sang trái để xóa, dùng menu ••• để tạo tệp văn bản mới."
+            "value": "Mở trực tiếp các container App Group và hệ thống. Chạm vào thư mục để mở, chạm vào tệp văn bản để sửa và lưu. Vuốt sang trái để xóa, hoặc chạm và giữ một mục để đổi tên, sao chép, di chuyển, nén hay chia sẻ, hoặc giải nén tệp zip. Dùng menu ••• để dán hoặc tạo tệp văn bản mới."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "直接打开 App Group 和系统容器。点按文件夹可打开，点按文本文件可编辑并保存。向左轻扫可删除，通过 ••• 菜单可新建文本文件。"
+            "value": "直接打开 App Group 和系统容器。点按文件夹可打开，点按文本文件可编辑并保存。向左轻扫可删除，长按项目可重命名、拷贝、移动、压缩或共享，或解压缩 zip 文件。通过 ••• 菜单可粘贴或新建文本文件。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "直接打開 App Group 與系統容器。點一下資料夾即可打開，點一下文字檔案即可編輯並儲存。向左滑動可刪除，透過 ••• 選單可新增文字檔案。"
+            "value": "直接打開 App Group 與系統容器。點一下資料夾即可打開，點一下文字檔案即可編輯並儲存。向左滑動可刪除，長按項目可重新命名、拷貝、搬移、壓縮或分享，或解壓縮 zip 檔案。透過 ••• 選單可貼上或新增文字檔案。"
+          }
+        }
+      }
+    },
+    "Paste": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لصق"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einsetzen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pegar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coller"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempel"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incolla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ペースト"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "붙여넣기"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plak"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вставить"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วาง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yapıştır"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dán"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "粘贴"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "貼上"
           }
         }
       }
@@ -6569,6 +7523,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "釋放沙盒延伸"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة التسمية"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Umbenennen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rename"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renombrar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renommer"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ganti Nama"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rinomina"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名前を変更"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이름 변경"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wijzig naam"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renomear"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переименовать"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลี่ยนชื่อ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden Adlandır"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đổi tên"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新命名"
           }
         }
       }
@@ -7523,6 +8583,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "已開啟。結束「設定」App 後生效。"
+          }
+        }
+      }
+    },
+    "Share": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشاركة"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teilen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partager"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bagikan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condividi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共有"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "공유"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartilhar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поделиться"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แชร์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paylaş"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chia sẻ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共享"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享"
           }
         }
       }

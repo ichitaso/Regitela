@@ -18,8 +18,29 @@ final class SandboxSession: ObservableObject {
     }
 }
 
+final class FileClipboard: ObservableObject {
+    @Published var url: URL?
+    @Published var isMove = false
+}
+
+struct ContainerIcon: View {
+    let identifier: String?
+
+    var body: some View {
+        if let identifier, let icon = appIcon(forIdentifier: identifier) {
+            Image(uiImage: icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 28, height: 28)
+        } else {
+            Image(systemName: "folder.fill")
+        }
+    }
+}
+
 struct FileExplorerView: View {
     @StateObject private var session: SandboxSession
+    @StateObject private var clipboard = FileClipboard()
     private let root: String
 
     init(root: String) {
@@ -35,12 +56,14 @@ struct FileExplorerView: View {
         Group {
             if session.isValid {
                 DirectoryView(path: root)
+                    .environmentObject(clipboard)
             } else {
                 ContentUnavailableView(
                     "No Access",
                     systemImage: "lock.slash",
                     description: Text("Couldn't consume a sandbox extension for:\n\(root)\n\nCheck the Log tab for the reason.")
                 )
+                .textSelection(.enabled)
             }
         }
     }
@@ -75,6 +98,20 @@ struct DirectoryView: View {
     @State private var error: String?
     @State private var newFileName = ""
     @State private var showingNewFile = false
+    @State private var renaming: Entry?
+    @State private var renameText = ""
+    @State private var search = ""
+    @State private var working = false
+    @EnvironmentObject private var clipboard: FileClipboard
+
+    private var filtered: [Entry] {
+        guard !search.isEmpty else { return entries }
+        return entries.filter {
+            $0.title.localizedCaseInsensitiveContains(search)
+                || $0.name.localizedCaseInsensitiveContains(search)
+                || ($0.identifier ?? "").localizedCaseInsensitiveContains(search)
+        }
+    }
 
     var body: some View {
         List {
@@ -83,6 +120,7 @@ struct DirectoryView: View {
                     Text(error)
                         .font(.footnote)
                         .foregroundStyle(.red)
+                        .textSelection(.enabled)
                 }
             }
 
@@ -91,14 +129,21 @@ struct DirectoryView: View {
                     Text("Empty directory")
                         .foregroundStyle(.secondary)
                 }
-                ForEach(entries) { entry in
+                ForEach(filtered) { entry in
                     row(for: entry)
+                        .contextMenu { menu(for: entry) }
                 }
                 .onDelete(perform: delete)
             } footer: {
                 if !entries.isEmpty {
                     Text("\(entries.count) item(s)")
                 }
+            }
+        }
+        .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always))
+        .overlay {
+            if working {
+                ProgressView()
             }
         }
         .navigationTitle(directoryTitle)
@@ -111,6 +156,11 @@ struct DirectoryView: View {
                         showingNewFile = true
                     } label: {
                         Label("New Text File", systemImage: "doc.badge.plus")
+                    }
+                    if clipboard.url != nil {
+                        Button(action: paste) {
+                            Label("Paste", systemImage: "doc.on.clipboard")
+                        }
                     }
                     Button {
                         load()
@@ -128,6 +178,12 @@ struct DirectoryView: View {
             Button("Create", action: createFile)
             Button("Cancel", role: .cancel) { }
         }
+        .alert("Rename", isPresented: Binding(get: { renaming != nil }, set: { if !$0 { renaming = nil } }), presenting: renaming) { entry in
+            TextField("Name", text: $renameText)
+                .textInputAutocapitalization(.never)
+            Button("Rename") { rename(entry) }
+            Button("Cancel", role: .cancel) { }
+        }
         .onAppear(perform: load)
         .refreshable { load() }
     }
@@ -137,6 +193,7 @@ struct DirectoryView: View {
         if entry.isDir {
             NavigationLink {
                 DirectoryView(path: entry.url.path)
+                    .environmentObject(clipboard)
             } label: {
                 Label {
                     VStack(alignment: .leading, spacing: 2) {
@@ -148,7 +205,7 @@ struct DirectoryView: View {
                         }
                     }
                 } icon: {
-                    Image(systemName: "folder.fill")
+                    ContainerIcon(identifier: entry.identifier)
                 }
             }
         } else {
@@ -162,6 +219,46 @@ struct DirectoryView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func menu(for entry: Entry) -> some View {
+        Button {
+            renameText = entry.name
+            renaming = entry
+        } label: {
+            Label("Rename", systemImage: "pencil")
+        }
+        Button {
+            clipboard.url = entry.url
+            clipboard.isMove = false
+        } label: {
+            Label("Copy", systemImage: "doc.on.doc")
+        }
+        Button {
+            clipboard.url = entry.url
+            clipboard.isMove = true
+        } label: {
+            Label("Move", systemImage: "folder")
+        }
+        if !entry.isDir && entry.url.pathExtension.lowercased() == "zip" {
+            Button {
+                extract(entry)
+            } label: {
+                Label("Extract", systemImage: "shippingbox.and.arrow.backward")
+            }
+        } else {
+            Button {
+                compress(entry)
+            } label: {
+                Label("Compress", systemImage: "archivebox")
+            }
+        }
+        if !entry.isDir {
+            ShareLink(item: entry.url) {
+                Label("Share", systemImage: "square.and.arrow.up")
             }
         }
     }
@@ -203,8 +300,9 @@ struct DirectoryView: View {
 
     private func delete(at offsets: IndexSet) {
         let files = FileManager.default
+        let shown = filtered
         for index in offsets {
-            let entry = entries[index]
+            let entry = shown[index]
             do {
                 try files.removeItem(at: entry.url)
                 print("deleted: \(entry.url.path)")
@@ -213,6 +311,118 @@ struct DirectoryView: View {
             }
         }
         load()
+    }
+
+    private func rename(_ entry: Entry) {
+        let name = renameText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !name.isEmpty, name != entry.name else { return }
+        let destination = entry.url.deletingLastPathComponent().appendingPathComponent(name)
+        if FileManager.default.fileExists(atPath: destination.path) {
+            error = String(localized: "\(name) already exists")
+            return
+        }
+        do {
+            try FileManager.default.moveItem(at: entry.url, to: destination)
+            print("renamed: \(entry.url.path) -> \(name)")
+            if clipboard.url == entry.url { clipboard.url = nil }
+            load()
+        } catch {
+            self.error = String(localized: "Failed to rename \(entry.name): \(error.localizedDescription)")
+        }
+    }
+
+    private func paste() {
+        guard let source = clipboard.url else { return }
+        let files = FileManager.default
+        let name = source.lastPathComponent
+        do {
+            if clipboard.isMove {
+                let destination = URL(fileURLWithPath: path).appendingPathComponent(name)
+                if destination.standardizedFileURL != source.standardizedFileURL {
+                    if files.fileExists(atPath: destination.path) {
+                        error = String(localized: "\(name) already exists")
+                        return
+                    }
+                    try files.moveItem(at: source, to: destination)
+                    print("moved: \(source.path) -> \(destination.path)")
+                }
+                clipboard.url = nil
+            } else {
+                let destination = availableURL(for: name)
+                try files.copyItem(at: source, to: destination)
+                print("copied: \(source.path) -> \(destination.path)")
+            }
+            error = nil
+        } catch {
+            self.error = String(localized: "Failed to paste \(name): \(error.localizedDescription)")
+        }
+        load()
+    }
+
+    private func compress(_ entry: Entry) {
+        let source = entry.url.path
+        let destination = availableURL(for: entry.name + ".zip").path
+        working = true
+        DispatchQueue.global(qos: .userInitiated).async {
+            let failure = createZip(source, destination)
+            DispatchQueue.main.async {
+                working = false
+                if let failure {
+                    error = String(localized: "Failed to compress \(entry.name): \(failure)")
+                } else {
+                    print("compressed: \(source) -> \(destination)")
+                }
+                load()
+            }
+        }
+    }
+
+    private func extract(_ entry: Entry) {
+        let files = FileManager.default
+        let staging = URL(fileURLWithPath: path).appendingPathComponent(".extract-\(UUID().uuidString)")
+        working = true
+        DispatchQueue.global(qos: .userInitiated).async {
+            let failure = extractArchive(entry.url.path, staging.path)
+            DispatchQueue.main.async {
+                working = false
+                if let failure {
+                    try? files.removeItem(at: staging)
+                    error = String(localized: "Failed to extract \(entry.name): \(failure)")
+                    load()
+                    return
+                }
+                // One top-level item is moved out as is; several go into a folder named after the archive
+                let items = (try? files.contentsOfDirectory(atPath: staging.path)) ?? []
+                do {
+                    if items.count == 1 {
+                        try files.moveItem(at: staging.appendingPathComponent(items[0]), to: availableURL(for: items[0]))
+                        try files.removeItem(at: staging)
+                    } else if items.isEmpty {
+                        try? files.removeItem(at: staging)
+                    } else {
+                        try files.moveItem(at: staging, to: availableURL(for: entry.url.deletingPathExtension().lastPathComponent))
+                    }
+                    print("extracted: \(entry.url.path)")
+                } catch {
+                    self.error = String(localized: "Failed to extract \(entry.name): \(error.localizedDescription)")
+                }
+                load()
+            }
+        }
+    }
+
+    private func availableURL(for name: String) -> URL {
+        let directory = URL(fileURLWithPath: path)
+        let base = (name as NSString).deletingPathExtension
+        let ext = (name as NSString).pathExtension
+        var candidate = directory.appendingPathComponent(name)
+        var number = 2
+        while FileManager.default.fileExists(atPath: candidate.path) {
+            let numbered = "\(base) \(number)"
+            candidate = directory.appendingPathComponent(ext.isEmpty ? numbered : numbered + "." + ext)
+            number += 1
+        }
+        return candidate
     }
 
     private func createFile() {
@@ -251,6 +461,7 @@ struct FileEditorView: View {
         Group {
             if let loadError {
                 ContentUnavailableView("Can't Open", systemImage: "exclamationmark.triangle", description: Text(loadError))
+                    .textSelection(.enabled)
             } else if isBinary {
                 binaryView
             } else {
@@ -276,6 +487,7 @@ struct FileEditorView: View {
                 Text(status)
                     .font(.footnote)
                     .foregroundStyle(.secondary)
+                    .textSelection(.enabled)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .padding(.top, 6)
