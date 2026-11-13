@@ -25,7 +25,7 @@ private let targetRegions = [
     TargetRegion(country: "VN", code: "VN"),
 ]
 
-private let gestaltPlist = ContainerPlist(
+let gestaltPlist = ContainerPlist(
     container: "/private/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache",
     relativePath: "Library/Caches/com.apple.MobileGestalt.plist"
 )
@@ -42,6 +42,33 @@ private let backupDefaultsKey = "RegionBackup"
 private var fullBackupURL: URL {
     FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         .appendingPathComponent("MobileGestalt-original.plist")
+}
+
+func readGestaltExtra() throws -> [String: Any] {
+    try gestaltPlist.withAccess {
+        let (dict, _) = try gestaltPlist.read()
+        return dict["CacheExtra"] as? [String: Any] ?? [:]
+    }
+}
+
+// Saves a copy of the untouched cache before the first change
+func modifyGestaltExtra(_ change: (inout [String: Any]) throws -> Void) throws {
+    try gestaltPlist.withAccess {
+        var (dict, format) = try gestaltPlist.read()
+        if !FileManager.default.fileExists(atPath: fullBackupURL.path) {
+            try gestaltPlist.readData().write(to: fullBackupURL)
+        }
+        var extra = dict["CacheExtra"] as? [String: Any] ?? [:]
+        try change(&extra)
+        dict["CacheExtra"] = extra
+        do {
+            try gestaltPlist.write(dict, format: format)
+        } catch {
+            throw NSError(domain: "Regitela", code: 1, userInfo: [
+                NSLocalizedDescriptionKey: describeError(error) + "\n" + gestaltPlist.diagnostics()
+            ])
+        }
+    }
 }
 
 struct RegionView: View {
@@ -139,25 +166,9 @@ struct RegionView: View {
         }
     }
 
-    private func modifyCacheExtra(_ change: (inout [String: Any], Data) throws -> Void) throws {
-        try gestaltPlist.withAccess {
-            var (dict, format) = try gestaltPlist.read()
-            var extra = dict["CacheExtra"] as? [String: Any] ?? [:]
-            try change(&extra, try gestaltPlist.readData())
-            dict["CacheExtra"] = extra
-            do {
-                try gestaltPlist.write(dict, format: format)
-            } catch {
-                throw NSError(domain: "Regitela", code: 1, userInfo: [
-                    NSLocalizedDescriptionKey: describeError(error) + "\n" + gestaltPlist.diagnostics()
-                ])
-            }
-        }
-    }
-
     private func apply() {
         do {
-            try modifyCacheExtra { extra, original in
+            try modifyGestaltExtra { extra in
                 var changes = [countryKey: target.code]
                 if let key = regionKey(in: extra) { changes[key] = target.region }
                 // Record each key's original value the first time it is changed ("" = it was absent)
@@ -166,9 +177,6 @@ struct RegionView: View {
                     backup[key] = extra[key] as? String ?? ""
                 }
                 UserDefaults.standard.set(backup, forKey: backupDefaultsKey)
-                if !FileManager.default.fileExists(atPath: fullBackupURL.path) {
-                    try original.write(to: fullBackupURL)
-                }
                 extra.merge(changes) { _, new in new }
             }
             report(String(localized: "Changed to \(target.name) (\(target.region)). Reboot to apply."), failed: false)
@@ -181,7 +189,7 @@ struct RegionView: View {
     private func restore() {
         guard let backup = UserDefaults.standard.dictionary(forKey: backupDefaultsKey) as? [String: String] else { return }
         do {
-            try modifyCacheExtra { extra, _ in
+            try modifyGestaltExtra { extra in
                 for (key, value) in backup {
                     extra[key] = value.isEmpty ? nil : value
                 }

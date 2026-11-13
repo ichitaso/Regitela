@@ -637,6 +637,642 @@
         }
       }
     },
+    "Adds Always On Display to Settings > Display & Brightness by adding keys to the MobileGestalt cache. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in. Disable removes only the keys this app added.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف مفاتيح إلى ذاكرة MobileGestalt المؤقتة. يضيف الشاشة الدائمة التشغيل إلى الإعدادات > شاشة العرض والإضاءة. أعد التشغيل للتطبيق. على شاشة لا يمكنها خفض معدل التحديث، تستهلك البطارية أكثر بكثير وقد تسبب احتراق الشاشة. يزيل التعطيل المفاتيح التي أضافها هذا التطبيق فقط."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt dem MobileGestalt-Cache Schlüssel hinzu. Fügt „Immer an“ unter Einstellungen > Anzeige & Helligkeit hinzu. Zum Anwenden neu starten. Auf einem Display, das nicht auf eine niedrige Bildwiederholrate wechseln kann, verbraucht es viel mehr Batterie und kann zu Einbrennen führen. Deaktivieren entfernt nur die Schlüssel, die diese App hinzugefügt hat."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds Always On Display to Settings > Display & Brightness by adding keys to the MobileGestalt cache. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in. Disable removes only the keys this app added."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade claves a la caché de MobileGestalt. Añade la pantalla siempre activa en Ajustes > Pantalla y brillo. Reinicia para aplicarlo. En una pantalla que no puede bajar a una frecuencia de actualización baja, consume mucha más batería y puede causar quemado de pantalla. Desactivar solo elimina las claves que añadió esta app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute des clés au cache MobileGestalt. Ajoute l'écran toujours activé dans Réglages > Luminosité et affichage. Redémarrez pour appliquer. Sur un écran qui ne peut pas descendre à une faible fréquence de rafraîchissement, il consomme beaucoup plus de batterie et peut provoquer un marquage. Désactiver ne supprime que les clés ajoutées par cette app."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan kunci ke cache MobileGestalt. Menambahkan Layar Selalu Aktif ke Pengaturan > Layar & Kecerahan. Mulai ulang untuk menerapkan. Pada layar yang tidak bisa turun ke refresh rate rendah, fitur ini jauh lebih boros baterai dan bisa menyebabkan burn-in. Menonaktifkan hanya menghapus kunci yang ditambahkan aplikasi ini."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge chiavi alla cache di MobileGestalt. Aggiunge il display sempre attivo in Impostazioni > Schermo e luminosità. Riavvia per applicare. Su un display che non può scendere a una frequenza di aggiornamento bassa consuma molta più batteria e può causare burn-in. Disattiva rimuove solo le chiavi aggiunte da questa app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt キャッシュにキーを追加して、設定 > 画面表示と明るさ に常時表示を追加します。再起動すると反映されます。低いリフレッシュレートに下げられない画面では、バッテリーの消費が大きく増え、焼き付きのおそれもあります。無効にすると、このアプリが追加したキーだけを削除します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt 캐시에 키를 추가해 설정 > 디스플레이 및 밝기에 상시표시형 디스플레이를 추가합니다. 재시동하면 적용됩니다. 주사율을 낮출 수 없는 화면에서는 배터리를 훨씬 많이 쓰고 번인이 생길 수 있습니다. 끄면 이 앱이 추가한 키만 삭제합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt sleutels toe aan de MobileGestalt-cache. Voegt het altijd-aan-scherm toe aan Instellingen > Beeldscherm en helderheid. Herstart om toe te passen. Op een scherm dat niet naar een lage verversingsfrequentie kan, verbruikt het veel meer batterij en kan het inbranden veroorzaken. Uitschakelen verwijdert alleen de sleutels die deze app heeft toegevoegd."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona chaves ao cache do MobileGestalt. Adiciona a Tela Sempre Ativa em Ajustes > Tela e Brilho. Reinicie para aplicar. Em uma tela que não consegue baixar para uma taxa de atualização baixa, consome muito mais bateria e pode causar marcas permanentes. Desativar remove apenas as chaves adicionadas por este app."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет ключи в кэш MobileGestalt. Добавляет «Экран, включенный всегда» в Настройки > Экран и яркость. Перезагрузите устройство, чтобы применить. На экране, который не может снижать частоту обновления, это сильно расходует аккумулятор и может вызвать выгорание. Выключение удаляет только ключи, добавленные этим приложением."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มคีย์ในแคช MobileGestalt เพิ่มจอภาพเปิดตลอดใน การตั้งค่า > จอภาพและความสว่าง รีบูตเพื่อให้มีผล บนจอที่ลดอัตรารีเฟรชลงต่ำไม่ได้ จะใช้แบตเตอรี่มากขึ้นมากและอาจทำให้จอเบิร์นได้ การปิดจะลบเฉพาะคีย์ที่แอปนี้เพิ่มไว้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt önbelleğine anahtar ekler. Ayarlar > Ekran ve Parlaklık bölümüne Daima Açık Ekran'ı ekler. Uygulamak için yeniden başlatın. Düşük yenileme hızına inemeyen bir ekranda çok daha fazla pil tüketir ve ekran yanmasına yol açabilir. Devre dışı bırakmak yalnızca bu uygulamanın eklediği anahtarları kaldırır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm khóa vào bộ nhớ đệm MobileGestalt. Thêm Màn hình luôn bật vào Cài đặt > Màn hình & Độ sáng. Khởi động lại để áp dụng. Trên màn hình không thể giảm xuống tần số quét thấp, tính năng này tốn pin hơn nhiều và có thể gây lưu ảnh. Tắt chỉ xóa các khóa do ứng dụng này thêm vào."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向 MobileGestalt 缓存添加键，在“设置”>“显示与亮度”中添加全天候显示。重启后生效。在无法降到低刷新率的屏幕上，耗电会大幅增加，还可能造成烧屏。停用只会删除本应用添加的键。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 MobileGestalt 快取中加入鍵，在「設定」>「螢幕顯示與亮度」中加入永遠顯示。重新開機後生效。在無法降到低更新率的螢幕上，耗電會大幅增加，也可能造成烙印。停用只會刪除本 App 加入的鍵。"
+          }
+        }
+      }
+    },
+    "Adds Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف الشاشة الدائمة التشغيل إلى الإعدادات > شاشة العرض والإضاءة. أعد التشغيل للتطبيق. على شاشة لا يمكنها خفض معدل التحديث، تستهلك البطارية أكثر بكثير وقد تسبب احتراق الشاشة."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt „Immer an“ unter Einstellungen > Anzeige & Helligkeit hinzu. Zum Anwenden neu starten. Auf einem Display, das nicht auf eine niedrige Bildwiederholrate wechseln kann, verbraucht es viel mehr Batterie und kann zu Einbrennen führen."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade la pantalla siempre activa en Ajustes > Pantalla y brillo. Reinicia para aplicarlo. En una pantalla que no puede bajar a una frecuencia de actualización baja, consume mucha más batería y puede causar quemado de pantalla."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute l'écran toujours activé dans Réglages > Luminosité et affichage. Redémarrez pour appliquer. Sur un écran qui ne peut pas descendre à une faible fréquence de rafraîchissement, il consomme beaucoup plus de batterie et peut provoquer un marquage."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan Layar Selalu Aktif ke Pengaturan > Layar & Kecerahan. Mulai ulang untuk menerapkan. Pada layar yang tidak bisa turun ke refresh rate rendah, fitur ini jauh lebih boros baterai dan bisa menyebabkan burn-in."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge il display sempre attivo in Impostazioni > Schermo e luminosità. Riavvia per applicare. Su un display che non può scendere a una frequenza di aggiornamento bassa consuma molta più batteria e può causare burn-in."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定 > 画面表示と明るさ に常時表示を追加します。再起動すると反映されます。低いリフレッシュレートに下げられない画面では、バッテリーの消費が大きく増え、焼き付きのおそれもあります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 > 디스플레이 및 밝기에 상시표시형 디스플레이를 추가합니다. 재시동하면 적용됩니다. 주사율을 낮출 수 없는 화면에서는 배터리를 훨씬 많이 쓰고 번인이 생길 수 있습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt het altijd-aan-scherm toe aan Instellingen > Beeldscherm en helderheid. Herstart om toe te passen. Op een scherm dat niet naar een lage verversingsfrequentie kan, verbruikt het veel meer batterij en kan het inbranden veroorzaken."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona a Tela Sempre Ativa em Ajustes > Tela e Brilho. Reinicie para aplicar. Em uma tela que não consegue baixar para uma taxa de atualização baixa, consome muito mais bateria e pode causar marcas permanentes."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет «Экран, включенный всегда» в Настройки > Экран и яркость. Перезагрузите устройство, чтобы применить. На экране, который не может снижать частоту обновления, это сильно расходует аккумулятор и может вызвать выгорание."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มจอภาพเปิดตลอดใน การตั้งค่า > จอภาพและความสว่าง รีบูตเพื่อให้มีผล บนจอที่ลดอัตรารีเฟรชลงต่ำไม่ได้ จะใช้แบตเตอรี่มากขึ้นมากและอาจทำให้จอเบิร์นได้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar > Ekran ve Parlaklık bölümüne Daima Açık Ekran'ı ekler. Uygulamak için yeniden başlatın. Düşük yenileme hızına inemeyen bir ekranda çok daha fazla pil tüketir ve ekran yanmasına yol açabilir."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm Màn hình luôn bật vào Cài đặt > Màn hình & Độ sáng. Khởi động lại để áp dụng. Trên màn hình không thể giảm xuống tần số quét thấp, tính năng này tốn pin hơn nhiều và có thể gây lưu ảnh."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“设置”>“显示与亮度”中添加全天候显示。重启后生效。在无法降到低刷新率的屏幕上，耗电会大幅增加，还可能造成烧屏。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「設定」>「螢幕顯示與亮度」中加入永遠顯示。重新開機後生效。在無法降到低更新率的螢幕上，耗電會大幅增加，也可能造成烙印。"
+          }
+        }
+      }
+    },
+    "Adds Tap to Wake to Settings > Accessibility > Touch by adding a key to the MobileGestalt cache. Reboot to apply. Disable removes only the key this app added.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف مفاتيح إلى ذاكرة MobileGestalt المؤقتة. يضيف \"الضغط للتنبيه\" إلى الإعدادات > تسهيلات الاستخدام > اللمس. أعد التشغيل للتطبيق. يزيل التعطيل المفاتيح التي أضافها هذا التطبيق فقط."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt dem MobileGestalt-Cache Schlüssel hinzu. Fügt „Zum Aktivieren tippen“ unter Einstellungen > Bedienungshilfen > Tippen hinzu. Zum Anwenden neu starten. Deaktivieren entfernt nur die Schlüssel, die diese App hinzugefügt hat."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds Tap to Wake to Settings > Accessibility > Touch by adding a key to the MobileGestalt cache. Reboot to apply. Disable removes only the key this app added."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade claves a la caché de MobileGestalt. Añade «Tocar para activar» en Ajustes > Accesibilidad > Tocar. Reinicia para aplicarlo. Desactivar solo elimina las claves que añadió esta app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute des clés au cache MobileGestalt. Ajoute « Toucher pour réactiver » dans Réglages > Accessibilité > Toucher. Redémarrez pour appliquer. Désactiver ne supprime que les clés ajoutées par cette app."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan kunci ke cache MobileGestalt. Menambahkan \"Ketuk untuk Membangunkan\" ke Pengaturan > Aksesibilitas > Sentuh. Mulai ulang untuk menerapkan. Menonaktifkan hanya menghapus kunci yang ditambahkan aplikasi ini."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge chiavi alla cache di MobileGestalt. Aggiunge «Tocca per riattivare» in Impostazioni > Accessibilità > Tocco. Riavvia per applicare. Disattiva rimuove solo le chiavi aggiunte da questa app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt キャッシュにキーを追加して、設定 > アクセシビリティ > タッチ に「タップでスリープ解除」を追加します。再起動すると反映されます。無効にすると、このアプリが追加したキーだけを削除します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt 캐시에 키를 추가해 설정 > 손쉬운 사용 > 터치에 \"탭하여 깨우기\"를 추가합니다. 재시동하면 적용됩니다. 끄면 이 앱이 추가한 키만 삭제합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt sleutels toe aan de MobileGestalt-cache. Voegt \"Tik om te activeren\" toe aan Instellingen > Toegankelijkheid > Aanraken. Herstart om toe te passen. Uitschakelen verwijdert alleen de sleutels die deze app heeft toegevoegd."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona chaves ao cache do MobileGestalt. Adiciona \"Tocar para Despertar\" em Ajustes > Acessibilidade > Toque. Reinicie para aplicar. Desativar remove apenas as chaves adicionadas por este app."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет ключи в кэш MobileGestalt. Добавляет «Касание для выхода из сна» в Настройки > Универсальный доступ > Касание. Перезагрузите устройство, чтобы применить. Выключение удаляет только ключи, добавленные этим приложением."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มคีย์ในแคช MobileGestalt เพิ่ม \"แตะเพื่อปลุก\" ใน การตั้งค่า > การช่วยการเข้าถึง > การสัมผัส รีบูตเพื่อให้มีผล การปิดจะลบเฉพาะคีย์ที่แอปนี้เพิ่มไว้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt önbelleğine anahtar ekler. Ayarlar > Erişilebilirlik > Dokunma bölümüne \"Uyandırmak için Dokun\"u ekler. Uygulamak için yeniden başlatın. Devre dışı bırakmak yalnızca bu uygulamanın eklediği anahtarları kaldırır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm khóa vào bộ nhớ đệm MobileGestalt. Thêm \"Chạm để bật\" vào Cài đặt > Trợ năng > Cảm ứng. Khởi động lại để áp dụng. Tắt chỉ xóa các khóa do ứng dụng này thêm vào."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向 MobileGestalt 缓存添加键，在“设置”>“辅助功能”>“触控”中添加“轻点唤醒”。重启后生效。停用只会删除本应用添加的键。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 MobileGestalt 快取中加入鍵，在「設定」>「輔助使用」>「觸控」中加入「點一下來喚醒」。重新開機後生效。停用只會刪除本 App 加入的鍵。"
+          }
+        }
+      }
+    },
+    "Adds Tap to Wake to Settings > Accessibility > Touch. Reboot to apply.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف \"الضغط للتنبيه\" إلى الإعدادات > تسهيلات الاستخدام > اللمس. أعد التشغيل للتطبيق."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt „Zum Aktivieren tippen“ unter Einstellungen > Bedienungshilfen > Tippen hinzu. Zum Anwenden neu starten."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds Tap to Wake to Settings > Accessibility > Touch. Reboot to apply."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade «Tocar para activar» en Ajustes > Accesibilidad > Tocar. Reinicia para aplicarlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute « Toucher pour réactiver » dans Réglages > Accessibilité > Toucher. Redémarrez pour appliquer."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan \"Ketuk untuk Membangunkan\" ke Pengaturan > Aksesibilitas > Sentuh. Mulai ulang untuk menerapkan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge «Tocca per riattivare» in Impostazioni > Accessibilità > Tocco. Riavvia per applicare."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定 > アクセシビリティ > タッチ に「タップでスリープ解除」を追加します。再起動すると反映されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 > 손쉬운 사용 > 터치에 \"탭하여 깨우기\"를 추가합니다. 재시동하면 적용됩니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt \"Tik om te activeren\" toe aan Instellingen > Toegankelijkheid > Aanraken. Herstart om toe te passen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona \"Tocar para Despertar\" em Ajustes > Acessibilidade > Toque. Reinicie para aplicar."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет «Касание для выхода из сна» в Настройки > Универсальный доступ > Касание. Перезагрузите устройство, чтобы применить."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่ม \"แตะเพื่อปลุก\" ใน การตั้งค่า > การช่วยการเข้าถึง > การสัมผัส รีบูตเพื่อให้มีผล"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar > Erişilebilirlik > Dokunma bölümüne \"Uyandırmak için Dokun\"u ekler. Uygulamak için yeniden başlatın."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm \"Chạm để bật\" vào Cài đặt > Trợ năng > Cảm ứng. Khởi động lại để áp dụng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“设置”>“辅助功能”>“触控”中添加“轻点唤醒”。重启后生效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「設定」>「輔助使用」>「觸控」中加入「點一下來喚醒」。重新開機後生效。"
+          }
+        }
+      }
+    },
+    "Adds the charge limit option to Settings > Battery > Charging by adding a key to the MobileGestalt cache. Reboot to apply. Whether charging actually stops at the limit depends on the device. Disable removes only the key this app added.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف مفتاحًا إلى ذاكرة MobileGestalt المؤقتة لإظهار خيار حد الشحن في الإعدادات > البطارية > الشحن. أعد التشغيل للتطبيق. يعتمد توقف الشحن فعليًا عند الحد على الجهاز. يزيل التعطيل المفتاح الذي أضافه هذا التطبيق فقط."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt dem MobileGestalt-Cache einen Schlüssel hinzu, damit die Option für das Ladelimit unter Einstellungen > Batterie > Laden erscheint. Zum Anwenden neu starten. Ob das Laden tatsächlich am Limit stoppt, hängt vom Gerät ab. Deaktivieren entfernt nur den Schlüssel, den diese App hinzugefügt hat."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds the charge limit option to Settings > Battery > Charging by adding a key to the MobileGestalt cache. Reboot to apply. Whether charging actually stops at the limit depends on the device. Disable removes only the key this app added."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade una clave a la caché de MobileGestalt para que aparezca la opción de límite de carga en Ajustes > Batería > Carga. Reinicia para aplicarlo. Que la carga se detenga realmente en el límite depende del dispositivo. Desactivar solo elimina la clave que añadió esta app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute une clé au cache MobileGestalt pour afficher l'option de limite de charge dans Réglages > Batterie > Recharge. Redémarrez pour appliquer. L'arrêt effectif de la charge à la limite dépend de l'appareil. Désactiver ne supprime que la clé ajoutée par cette app."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan kunci ke cache MobileGestalt agar opsi batas pengisian muncul di Pengaturan > Baterai > Pengisian. Mulai ulang untuk menerapkan. Apakah pengisian benar-benar berhenti di batas bergantung pada perangkat. Menonaktifkan hanya menghapus kunci yang ditambahkan aplikasi ini."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge una chiave alla cache di MobileGestalt per mostrare l'opzione del limite di carica in Impostazioni > Batteria > Ricarica. Riavvia per applicare. Che la ricarica si fermi davvero al limite dipende dal dispositivo. Disattiva rimuove solo la chiave aggiunta da questa app."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt キャッシュにキーを追加して、設定 > バッテリー > 充電 に充電上限の項目を出します。再起動すると反映されます。実際に上限で充電が止まるかは機種によります。無効にすると、このアプリが追加したキーだけを削除します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobileGestalt 캐시에 키를 추가해 설정 > 배터리 > 충전에 충전 한도 항목이 나타나게 합니다. 재시동하면 적용됩니다. 실제로 한도에서 충전이 멈추는지는 기기에 따라 다릅니다. 끄면 이 앱이 추가한 키만 삭제합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt een sleutel toe aan de MobileGestalt-cache zodat de optie voor de laadlimiet verschijnt in Instellingen > Batterij > Opladen. Herstart om toe te passen. Of het opladen echt bij de limiet stopt, hangt af van het apparaat. Uitschakelen verwijdert alleen de sleutel die deze app heeft toegevoegd."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona uma chave ao cache do MobileGestalt para mostrar a opção de limite de carga em Ajustes > Bateria > Carregamento. Reinicie para aplicar. Se o carregamento realmente para no limite depende do dispositivo. Desativar remove apenas a chave adicionada por este app."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет ключ в кэш MobileGestalt, чтобы в Настройки > Аккумулятор > Зарядка появился параметр предела зарядки. Перезагрузите устройство, чтобы применить. Остановится ли зарядка на пределе, зависит от устройства. Выключение удаляет только ключ, добавленный этим приложением."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มคีย์ในแคช MobileGestalt เพื่อให้ตัวเลือกขีดจำกัดการชาร์จแสดงใน การตั้งค่า > แบตเตอรี่ > การชาร์จ รีบูตเพื่อให้มีผล การชาร์จจะหยุดที่ขีดจำกัดจริงหรือไม่ขึ้นอยู่กับอุปกรณ์ การปิดจะลบเฉพาะคีย์ที่แอปนี้เพิ่มไว้"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar > Pil > Şarj bölümünde şarj sınırı seçeneğinin görünmesi için MobileGestalt önbelleğine bir anahtar ekler. Uygulamak için yeniden başlatın. Şarjın sınırda gerçekten durup durmadığı cihaza bağlıdır. Devre dışı bırakmak yalnızca bu uygulamanın eklediği anahtarı kaldırır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm một khóa vào bộ nhớ đệm MobileGestalt để tùy chọn giới hạn sạc xuất hiện trong Cài đặt > Pin > Sạc. Khởi động lại để áp dụng. Việc sạc có thực sự dừng ở giới hạn hay không tùy thuộc vào thiết bị. Tắt chỉ xóa khóa do ứng dụng này thêm vào."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向 MobileGestalt 缓存添加一个键，使“设置”>“电池”>“充电”中出现充电上限选项。重启后生效。充电是否真的会在上限处停止取决于设备。停用只会删除本应用添加的键。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 MobileGestalt 快取中加入一個鍵，讓「設定」>「電池」>「充電」出現充電上限選項。重新開機後生效。充電是否真的會在上限處停止取決於裝置。停用只會刪除本 App 加入的鍵。"
+          }
+        }
+      }
+    },
+    "Adds the charge limit option to Settings > Battery > Charging. Reboot to apply. Whether charging actually stops at the limit depends on the device.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف خيار حد الشحن إلى الإعدادات > البطارية > الشحن. أعد التشغيل للتطبيق. يعتمد توقف الشحن فعليًا عند الحد على الجهاز."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fügt die Option für das Ladelimit unter Einstellungen > Batterie > Laden hinzu. Zum Anwenden neu starten. Ob das Laden tatsächlich am Limit stoppt, hängt vom Gerät ab."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adds the charge limit option to Settings > Battery > Charging. Reboot to apply. Whether charging actually stops at the limit depends on the device."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade la opción de límite de carga en Ajustes > Batería > Carga. Reinicia para aplicarlo. Que la carga se detenga realmente en el límite depende del dispositivo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute l'option de limite de charge dans Réglages > Batterie > Recharge. Redémarrez pour appliquer. L'arrêt effectif de la charge à la limite dépend de l'appareil."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menambahkan opsi batas pengisian ke Pengaturan > Baterai > Pengisian. Mulai ulang untuk menerapkan. Apakah pengisian benar-benar berhenti di batas bergantung pada perangkat."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiunge l'opzione del limite di carica in Impostazioni > Batteria > Ricarica. Riavvia per applicare. Che la ricarica si fermi davvero al limite dipende dal dispositivo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定 > バッテリー > 充電 に充電上限の項目を追加します。再起動すると反映されます。実際に上限で充電が止まるかは機種によります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정 > 배터리 > 충전에 충전 한도 항목을 추가합니다. 재시동하면 적용됩니다. 실제로 한도에서 충전이 멈추는지는 기기에 따라 다릅니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voegt de optie voor de laadlimiet toe aan Instellingen > Batterij > Opladen. Herstart om toe te passen. Of het opladen echt bij de limiet stopt, hangt af van het apparaat."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adiciona a opção de limite de carga em Ajustes > Bateria > Carregamento. Reinicie para aplicar. Se o carregamento realmente para no limite depende do dispositivo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавляет параметр предела зарядки в Настройки > Аккумулятор > Зарядка. Перезагрузите устройство, чтобы применить. Остановится ли зарядка на пределе, зависит от устройства."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เพิ่มตัวเลือกขีดจำกัดการชาร์จใน การตั้งค่า > แบตเตอรี่ > การชาร์จ รีบูตเพื่อให้มีผล การชาร์จจะหยุดที่ขีดจำกัดจริงหรือไม่ขึ้นอยู่กับอุปกรณ์"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar > Pil > Şarj bölümüne şarj sınırı seçeneğini ekler. Uygulamak için yeniden başlatın. Şarjın sınırda gerçekten durup durmadığı cihaza bağlıdır."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thêm tùy chọn giới hạn sạc vào Cài đặt > Pin > Sạc. Khởi động lại để áp dụng. Việc sạc có thực sự dừng ở giới hạn hay không tùy thuộc vào thiết bị."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“设置”>“电池”>“充电”中添加充电上限选项。重启后生效。充电是否真的会在上限处停止取决于设备。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在「設定」>「電池」>「充電」中加入充電上限選項。重新開機後生效。充電是否真的會在上限處停止取決於裝置。"
+          }
+        }
+      }
+    },
     "Advanced": {
       "localizations": {
         "ar": {
@@ -739,6 +1375,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "進階"
+          }
+        }
+      }
+    },
+    "Always On Display": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الشاشة الدائمة التشغيل"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immer an"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Always On Display"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla siempre activa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Écran toujours activé"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layar Selalu Aktif"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display sempre attivo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常時表示"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "상시표시형 디스플레이"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Altijd-aan-scherm"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tela Sempre Ativa"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экран, включенный всегда"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จอภาพเปิดตลอด"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daima Açık Ekran"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Màn hình luôn bật"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全天候显示"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "永遠顯示"
           }
         }
       }
@@ -1799,6 +2541,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "將 MobileGestalt 快取中的國家與地區代碼更改為 US (LL/A)。重新開機後生效，之後再重新開機也會保留。「恢復原始值」可還原首次變更前儲存的值。"
+          }
+        }
+      }
+    },
+    "Charge Limit": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حد الشحن"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ladelimit"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charge Limit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Límite de carga"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limite de charge"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Batas Pengisian"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limite di carica"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充電上限"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "충전 한도"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laadlimiet"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limite de carga"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Предел зарядки"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ขีดจำกัดการชาร์จ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Şarj Sınırı"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giới hạn sạc"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充电上限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充電上限"
           }
         }
       }
@@ -7315,108 +8163,108 @@
         }
       }
     },
-    "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 26 and 27; Supervised Mode, Region and Browse need iOS 27. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3).": {
+    "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 26 and 27; the Tweaks and Browse need iOS 27. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3).": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يستخدم Regitela ثغرة الهروب من sandbox المسماة worse_query لقراءة الملفات خارج sandbox الخاص به وتغييرها، دون جيلبريك. يعمل على iOS 26 و27؛ وتتطلب ميزات الوضع الخاضع للإشراف والمنطقة والتصفح iOS 27. على جيلبريك rootless (iOS 17 أو أحدث)، ثبّت ملف ‎.deb بدلاً من ذلك: فهو يعمل بدون sandbox، لذا تعمل جميع الميزات. مبني على worse_query من forcequit ‏(GPLv3)."
+            "value": "يستخدم Regitela ثغرة الهروب من sandbox المسماة worse_query لقراءة الملفات خارج sandbox الخاص به وتغييرها، دون جيلبريك. يعمل على iOS 26 و27؛ وتتطلب ميزات التعديلات والتصفح iOS 27. على جيلبريك rootless (iOS 17 أو أحدث)، ثبّت ملف ‎.deb بدلاً من ذلك: فهو يعمل بدون sandbox، لذا تعمل جميع الميزات. مبني على worse_query من forcequit ‏(GPLv3)."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela nutzt den worse_query-Sandbox-Ausbruch, um ohne Jailbreak Dateien außerhalb der eigenen Sandbox zu lesen und zu ändern. Läuft unter iOS 26 und 27; Betreuter Modus, Region und Durchsuchen benötigen iOS 27. Mit einem Rootless-Jailbreak (ab iOS 17) installierst du stattdessen das .deb: Es läuft ohne Sandbox, daher funktionieren alle Funktionen. Basiert auf worse_query von forcequit (GPLv3)."
+            "value": "Regitela nutzt den worse_query-Sandbox-Ausbruch, um ohne Jailbreak Dateien außerhalb der eigenen Sandbox zu lesen und zu ändern. Läuft unter iOS 26 und 27; Anpassungen und Durchsuchen benötigen iOS 27. Mit einem Rootless-Jailbreak (ab iOS 17) installierst du stattdessen das .deb: Es läuft ohne Sandbox, daher funktionieren alle Funktionen. Basiert auf worse_query von forcequit (GPLv3)."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 26 and 27; Supervised Mode, Region and Browse need iOS 27. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3)."
+            "value": "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 26 and 27; the Tweaks and Browse need iOS 27. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3)."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela usa el escape de sandbox worse_query para leer y modificar archivos fuera de su propio sandbox, sin jailbreak. Funciona en iOS 26 y 27; Modo supervisado, Región y Explorar requieren iOS 27. Con un jailbreak rootless (iOS 17 o posterior), instala el .deb: se ejecuta sin sandbox, así que todas las funciones están disponibles. Basado en worse_query de forcequit (GPLv3)."
+            "value": "Regitela usa el escape de sandbox worse_query para leer y modificar archivos fuera de su propio sandbox, sin jailbreak. Funciona en iOS 26 y 27; los Ajustes y Explorar requieren iOS 27. Con un jailbreak rootless (iOS 17 o posterior), instala el .deb: se ejecuta sin sandbox, así que todas las funciones están disponibles. Basado en worse_query de forcequit (GPLv3)."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela utilise l'évasion de sandbox worse_query pour lire et modifier des fichiers hors de son propre sandbox, sans jailbreak. Fonctionne sur iOS 26 et 27 ; Mode supervisé, Région et Parcourir nécessitent iOS 27. Avec un jailbreak rootless (iOS 17 ou ultérieur), installez plutôt le .deb : il s'exécute sans sandbox, donc toutes les fonctions sont disponibles. Basé sur worse_query de forcequit (GPLv3)."
+            "value": "Regitela utilise l'évasion de sandbox worse_query pour lire et modifier des fichiers hors de son propre sandbox, sans jailbreak. Fonctionne sur iOS 26 et 27 ; les Réglages et Parcourir nécessitent iOS 27. Avec un jailbreak rootless (iOS 17 ou ultérieur), installez plutôt le .deb : il s'exécute sans sandbox, donc toutes les fonctions sont disponibles. Basé sur worse_query de forcequit (GPLv3)."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela menggunakan sandbox escape worse_query untuk membaca dan mengubah file di luar sandbox-nya sendiri, tanpa jailbreak. Berfungsi di iOS 26 dan 27; Mode Diawasi, Wilayah, dan Telusuri memerlukan iOS 27. Pada jailbreak rootless (iOS 17 atau lebih baru), instal .deb sebagai gantinya: berjalan tanpa sandbox sehingga semua fitur berfungsi. Berdasarkan worse_query oleh forcequit (GPLv3)."
+            "value": "Regitela menggunakan sandbox escape worse_query untuk membaca dan mengubah file di luar sandbox-nya sendiri, tanpa jailbreak. Berfungsi di iOS 26 dan 27; Tweak dan Telusuri memerlukan iOS 27. Pada jailbreak rootless (iOS 17 atau lebih baru), instal .deb sebagai gantinya: berjalan tanpa sandbox sehingga semua fitur berfungsi. Berdasarkan worse_query oleh forcequit (GPLv3)."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela usa l'evasione dalla sandbox worse_query per leggere e modificare file al di fuori della propria sandbox, senza jailbreak. Funziona su iOS 26 e 27; Modalità supervisionata, Regione e Sfoglia richiedono iOS 27. Con un jailbreak rootless (iOS 17 o successivo), installa invece il .deb: viene eseguito senza sandbox, quindi tutte le funzioni sono disponibili. Basato su worse_query di forcequit (GPLv3)."
+            "value": "Regitela usa l'evasione dalla sandbox worse_query per leggere e modificare file al di fuori della propria sandbox, senza jailbreak. Funziona su iOS 26 e 27; i Tweak e Sfoglia richiedono iOS 27. Con un jailbreak rootless (iOS 17 o successivo), installa invece il .deb: viene eseguito senza sandbox, quindi tutte le funzioni sono disponibili. Basato su worse_query di forcequit (GPLv3)."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela は worse_query のサンドボックス脱出を使い、脱獄なしで自分のサンドボックスの外にあるファイルを読み書きします。iOS 26 と 27 で動作し、監視モード・地域・ブラウズは iOS 27 が必要です。ルートレス脱獄の環境(iOS 17 以降)では .deb を入れてください。サンドボックスなしで動くので、すべての機能が使えます。forcequit 氏の worse_query (GPLv3) をもとにしています。"
+            "value": "Regitela は worse_query のサンドボックス脱出を使い、脱獄なしで自分のサンドボックスの外にあるファイルを読み書きします。iOS 26 と 27 で動作し、Tweak とブラウズは iOS 27 が必要です。ルートレス脱獄の環境(iOS 17 以降)では .deb を入れてください。サンドボックスなしで動くので、すべての機能が使えます。forcequit 氏の worse_query (GPLv3) をもとにしています。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela는 worse_query 샌드박스 탈출을 이용해 탈옥 없이 자체 샌드박스 밖의 파일을 읽고 수정합니다. iOS 26과 27에서 동작하며, 감독 모드·지역·탐색은 iOS 27이 필요합니다. 루트리스 탈옥 환경(iOS 17 이상)에서는 .deb를 설치하세요. 샌드박스 없이 동작하므로 모든 기능을 사용할 수 있습니다. forcequit의 worse_query(GPLv3)를 기반으로 합니다."
+            "value": "Regitela는 worse_query 샌드박스 탈출을 이용해 탈옥 없이 자체 샌드박스 밖의 파일을 읽고 수정합니다. iOS 26과 27에서 동작하며, 트윅과 탐색은 iOS 27이 필요합니다. 루트리스 탈옥 환경(iOS 17 이상)에서는 .deb를 설치하세요. 샌드박스 없이 동작하므로 모든 기능을 사용할 수 있습니다. forcequit의 worse_query(GPLv3)를 기반으로 합니다."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela gebruikt de worse_query-sandboxontsnapping om zonder jailbreak bestanden buiten de eigen sandbox te lezen en te wijzigen. Werkt op iOS 26 en 27; Begeleide modus, Regio en Blader vereisen iOS 27. Installeer bij een rootless jailbreak (iOS 17 of later) in plaats daarvan het .deb-bestand: het draait zonder sandbox, dus alle functies werken. Gebaseerd op worse_query van forcequit (GPLv3)."
+            "value": "Regitela gebruikt de worse_query-sandboxontsnapping om zonder jailbreak bestanden buiten de eigen sandbox te lezen en te wijzigen. Werkt op iOS 26 en 27; Tweaks en Blader vereisen iOS 27. Installeer bij een rootless jailbreak (iOS 17 of later) in plaats daarvan het .deb-bestand: het draait zonder sandbox, dus alle functies werken. Gebaseerd op worse_query van forcequit (GPLv3)."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela usa o escape de sandbox worse_query para ler e alterar arquivos fora do próprio sandbox, sem jailbreak. Funciona no iOS 26 e 27; Modo supervisionado, Região e Navegar exigem iOS 27. Com jailbreak rootless (iOS 17 ou posterior), instale o .deb: ele roda sem sandbox, então todos os recursos funcionam. Baseado no worse_query de forcequit (GPLv3)."
+            "value": "Regitela usa o escape de sandbox worse_query para ler e alterar arquivos fora do próprio sandbox, sem jailbreak. Funciona no iOS 26 e 27; os Ajustes e Navegar exigem iOS 27. Com jailbreak rootless (iOS 17 ou posterior), instale o .deb: ele roda sem sandbox, então todos os recursos funcionam. Baseado no worse_query de forcequit (GPLv3)."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela использует выход из песочницы worse_query, чтобы читать и изменять файлы за пределами своей песочницы без джейлбрейка. Работает на iOS 26 и 27; режим контроля, регион и обзор требуют iOS 27. При rootless-джейлбрейке (iOS 17 и новее) установите .deb: приложение работает без песочницы, поэтому доступны все функции. Основано на worse_query от forcequit (GPLv3)."
+            "value": "Regitela использует выход из песочницы worse_query, чтобы читать и изменять файлы за пределами своей песочницы без джейлбрейка. Работает на iOS 26 и 27; твики и обзор требуют iOS 27. При rootless-джейлбрейке (iOS 17 и новее) установите .deb: приложение работает без песочницы, поэтому доступны все функции. Основано на worse_query от forcequit (GPLv3)."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela ใช้ช่องโหว่หลบหนี sandbox ชื่อ worse_query เพื่ออ่านและแก้ไขไฟล์นอก sandbox ของตัวเองโดยไม่ต้องเจลเบรก ใช้งานได้บน iOS 26 และ 27 ส่วนโหมดควบคุมดูแล ภูมิภาค และเรียกดู ต้องใช้ iOS 27 สำหรับเจลเบรกแบบ rootless (iOS 17 ขึ้นไป) ให้ติดตั้ง .deb แทน ซึ่งทำงานโดยไม่มี sandbox จึงใช้ได้ทุกฟีเจอร์ พัฒนาต่อจาก worse_query โดย forcequit (GPLv3)"
+            "value": "Regitela ใช้ช่องโหว่หลบหนี sandbox ชื่อ worse_query เพื่ออ่านและแก้ไขไฟล์นอก sandbox ของตัวเองโดยไม่ต้องเจลเบรก ใช้งานได้บน iOS 26 และ 27 ส่วนTweak และเรียกดู ต้องใช้ iOS 27 สำหรับเจลเบรกแบบ rootless (iOS 17 ขึ้นไป) ให้ติดตั้ง .deb แทน ซึ่งทำงานโดยไม่มี sandbox จึงใช้ได้ทุกฟีเจอร์ พัฒนาต่อจาก worse_query โดย forcequit (GPLv3)"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela, jailbreak olmadan kendi sandbox'ı dışındaki dosyaları okumak ve değiştirmek için worse_query sandbox kaçışını kullanır. iOS 26 ve 27'de çalışır; Denetimli Mod, Bölge ve Gözat için iOS 27 gerekir. Rootless jailbreak'te (iOS 17 veya üstü) bunun yerine .deb'i yükleyin: sandbox olmadan çalıştığı için tüm özellikler çalışır. forcequit'in worse_query projesine dayanır (GPLv3)."
+            "value": "Regitela, jailbreak olmadan kendi sandbox'ı dışındaki dosyaları okumak ve değiştirmek için worse_query sandbox kaçışını kullanır. iOS 26 ve 27'de çalışır; Ayarlamalar ve Gözat için iOS 27 gerekir. Rootless jailbreak'te (iOS 17 veya üstü) bunun yerine .deb'i yükleyin: sandbox olmadan çalıştığı için tüm özellikler çalışır. forcequit'in worse_query projesine dayanır (GPLv3)."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela dùng lỗ hổng thoát sandbox worse_query để đọc và sửa tệp bên ngoài sandbox của chính nó mà không cần jailbreak. Hoạt động trên iOS 26 và 27; Chế độ giám sát, Khu vực và Duyệt cần iOS 27. Trên jailbreak rootless (iOS 17 trở lên), hãy cài bản .deb: ứng dụng chạy không có sandbox nên mọi tính năng đều hoạt động. Dựa trên worse_query của forcequit (GPLv3)."
+            "value": "Regitela dùng lỗ hổng thoát sandbox worse_query để đọc và sửa tệp bên ngoài sandbox của chính nó mà không cần jailbreak. Hoạt động trên iOS 26 và 27; Tinh chỉnh và Duyệt cần iOS 27. Trên jailbreak rootless (iOS 17 trở lên), hãy cài bản .deb: ứng dụng chạy không có sandbox nên mọi tính năng đều hoạt động. Dựa trên worse_query của forcequit (GPLv3)."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela 利用 worse_query 沙盒逃逸，无需越狱即可读写自身沙盒之外的文件。支持 iOS 26 和 27；监管模式、地区和浏览需要 iOS 27。在无根越狱环境（iOS 17 及以上）中请安装 .deb：它在沙盒外运行，所有功能均可使用。基于 forcequit 的 worse_query（GPLv3）。"
+            "value": "Regitela 利用 worse_query 沙盒逃逸，无需越狱即可读写自身沙盒之外的文件。支持 iOS 26 和 27；调整和浏览需要 iOS 27。在无根越狱环境（iOS 17 及以上）中请安装 .deb：它在沙盒外运行，所有功能均可使用。基于 forcequit 的 worse_query（GPLv3）。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "Regitela 利用 worse_query 沙盒逃逸，無需越獄即可讀寫自身沙盒以外的檔案。支援 iOS 26 與 27；監管模式、地區與瀏覽需要 iOS 27。在無根越獄環境（iOS 17 以上）中請安裝 .deb：它在沙盒外執行，所有功能皆可使用。基於 forcequit 的 worse_query（GPLv3）。"
+            "value": "Regitela 利用 worse_query 沙盒逃逸，無需越獄即可讀寫自身沙盒以外的檔案。支援 iOS 26 與 27；調整與瀏覽需要 iOS 27。在無根越獄環境（iOS 17 以上）中請安裝 .deb：它在沙盒外執行，所有功能皆可使用。基於 forcequit 的 worse_query（GPLv3）。"
           }
         }
       }
@@ -8481,6 +9329,112 @@
         }
       }
     },
+    "Set to OFF. Reboot to apply.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم الإيقاف. أعد التشغيل للتطبيق."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf AUS gesetzt. Zum Anwenden neu starten."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set to OFF. Reboot to apply."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desactivado. Reinicia para aplicarlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Désactivé. Redémarrez pour appliquer."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diatur ke NONAKTIF. Mulai ulang untuk menerapkan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disattivato. Riavvia per applicare."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オフにしました。再起動すると反映されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "껐습니다. 재시동하면 적용됩니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingesteld op UIT. Herstart om toe te passen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativado. Reinicie para aplicar."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выключено. Перезагрузите устройство, чтобы применить."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ปิดแล้ว รีบูตเพื่อให้มีผล"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KAPALI olarak ayarlandı. Uygulamak için yeniden başlatın."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đã TẮT. Khởi động lại để áp dụng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已关闭。重启后生效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已關閉。重新開機後生效。"
+          }
+        }
+      }
+    },
     "Set to ON. Quit the Settings app to apply.": {
       "localizations": {
         "ar": {
@@ -8583,6 +9537,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "已開啟。結束「設定」App 後生效。"
+          }
+        }
+      }
+    },
+    "Set to ON. Reboot to apply.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم التشغيل. أعد التشغيل للتطبيق."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf EIN gesetzt. Zum Anwenden neu starten."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set to ON. Reboot to apply."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activado. Reinicia para aplicarlo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activé. Redémarrez pour appliquer."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diatur ke AKTIF. Mulai ulang untuk menerapkan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attivato. Riavvia per applicare."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オンにしました。再起動すると反映されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "켰습니다. 재시동하면 적용됩니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingesteld op AAN. Herstart om toe te passen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ativado. Reinicie para aplicar."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Включено. Перезагрузите устройство, чтобы применить."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปิดแล้ว รีบูตเพื่อให้มีผล"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AÇIK olarak ayarlandı. Uygulamak için yeniden başlatın."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đã BẬT. Khởi động lại để áp dụng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已开启。重启后生效。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已開啟。重新開機後生效。"
           }
         }
       }
@@ -9007,6 +10067,112 @@
           "stringUnit": {
             "state": "translated",
             "value": "監管模式"
+          }
+        }
+      }
+    },
+    "Tap to Wake": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الضغط للتنبيه"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zum Aktivieren tippen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to Wake"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocar para activar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toucher pour réactiver"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ketuk untuk Membangunkan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocca per riattivare"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タップでスリープ解除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "탭하여 깨우기"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tik om te activeren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocar para Despertar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Касание для выхода из сна"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แตะเพื่อปลุก"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uyandırmak için Dokun"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chạm để bật"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻点唤醒"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "點一下來喚醒"
           }
         }
       }

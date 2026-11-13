@@ -31,6 +31,9 @@
 
 - **Supervised Mode**: turn it on or off. Quit the Settings app to apply.
 - **Region**: change the region code and sales region in the MobileGestalt cache to a region chosen from a list (US LL/A by default; also JP, CN, HK, TW, KR, GB, DE, FR, CA, AU, SG, IN, VN). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
+- **Charge Limit**: add the charge limit option to Settings > Battery > Charging on devices that don't have it. Reboot to apply. Whether charging actually stops at the limit depends on the device.
+- **Always On Display**: add Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in.
+- **Tap to Wake**: add Tap to Wake to Settings > Accessibility > Touch on devices that don't have it. Reboot to apply.
 - **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, and delete files. Long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Folders of apps show the app icon, and a search bar filters the list.
 - **Containers**: find the containers of apps, extensions and system services with pathleak. They are listed by app name or bundle ID, and you can open any of them.
 - **Advanced**: the original worse_query tools, which work on any path. You can hold a sandbox extension, share a path's contents and list the folders under a path.
@@ -40,7 +43,7 @@
 
 | Install | iOS | Notes |
 |---|---|---|
-| IPA (sideload) | 26.0 - 26.7.2, 27.0 - 27.2 | Supervised Mode, Region and Browse need iOS 27 |
+| IPA (sideload) | 26.0 - 26.7.2, 27.0 - 27.2 | The tweaks and Browse need iOS 27 |
 
 > [!NOTE]
 > Versions not listed are unsupported. worse_query may be patched in a future iOS update.
@@ -63,7 +66,7 @@ To add a region to the list, add an entry to `targetRegions` in `Regitela/Region
    The app was signed without its App Group, which happens with Sideloadly. Reinstall it with [Impactor](https://github.com/claration/impactor/releases).
 2. **I built it with Xcode and get "Couldn't get access to the container (handle -1)".**
    The App Group was not included when Xcode signed the app. In Signing & Capabilities, add an App Group registered to your team and make sure it is checked, then build again. Any group name works, because Regitela reads it from its entitlements. The Log tab should show `app group: <your group>`.
-3. **Supervised Mode, Region or Browse don't work on iOS 26.**
+3. **The tweaks or Browse don't work on iOS 26.**
    They need iOS 27. On iOS 26, worse_query can't reach the SystemGroup containers.
 4. **The Containers scan takes a long time.**
    pathleak brute-forces inodes, so the first scan is slow. The results are kept until the app quits.
