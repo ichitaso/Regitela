@@ -2,3 +2,4 @@
 #include "pathleak.h"
 #include "AppNames.h"
 #include "Archive.h"
+#include "Gestalt.h"

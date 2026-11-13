@@ -90,20 +90,12 @@ private struct HomeView: View {
                 } label: {
                     Label("Region", systemImage: "globe")
                 }
-                NavigationLink {
-                    GestaltFeatureView(feature: .chargeLimit)
-                } label: {
-                    Label("Charge Limit", systemImage: "battery.75percent")
-                }
-                NavigationLink {
-                    GestaltFeatureView(feature: .alwaysOn)
-                } label: {
-                    Label("Always On Display", systemImage: "clock")
-                }
-                NavigationLink {
-                    GestaltFeatureView(feature: .tapToWake)
-                } label: {
-                    Label("Tap to Wake", systemImage: "hand.tap")
+                ForEach(GestaltFeature.all.filter(\.isVisible)) { feature in
+                    NavigationLink {
+                        GestaltFeatureView(feature: feature)
+                    } label: {
+                        Label(feature.title, systemImage: feature.icon)
+                    }
                 }
             }
             

@@ -2,15 +2,26 @@ import SwiftUI
 
 // Device capability keys in the MobileGestalt cache. They are absent on devices without the
 // feature; adding them survives a reboot (verified on iOS 26), and the feature shows up after it.
-struct GestaltFeature {
+struct GestaltFeature: Identifiable {
     let title: LocalizedStringKey
+    let icon: String
     let keys: [String]
     let footer: LocalizedStringKey
     // Set when this app added the keys, so Disable never removes keys the device had itself
     let addedDefaultsKey: String
 
+    var id: String { addedDefaultsKey }
+
+    // Hidden on devices that have the feature themselves, unless this app added the keys
+    var isVisible: Bool {
+        UserDefaults.standard.bool(forKey: addedDefaultsKey) || !MGGetBoolAnswer(keys[0] as CFString)
+    }
+
+    static let all = [chargeLimit, alwaysOn, tapToWake]
+
     static let chargeLimit = GestaltFeature(
         title: "Charge Limit",
+        icon: "battery.75percent",
         keys: ["37NVydb//GP/GrhuTN+exg"], // DeviceSupports80ChargeLimit
         footer: "Adds the charge limit option to Settings > Battery > Charging. Reboot to apply. Whether charging actually stops at the limit depends on the device.",
         addedDefaultsKey: "ChargeLimitAdded"
@@ -18,6 +29,7 @@ struct GestaltFeature {
 
     static let alwaysOn = GestaltFeature(
         title: "Always On Display",
+        icon: "clock",
         keys: ["2OOJf1VhaM7NxfRok3HbWQ", "j8/Omm6s1lsmTDFsXjsBfA"], // DeviceSupportsAlwaysOnDisplay, DeviceSupportsAlwaysOnTime
         footer: "Adds Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in.",
         addedDefaultsKey: "AlwaysOnAdded"
@@ -25,6 +37,7 @@ struct GestaltFeature {
 
     static let tapToWake = GestaltFeature(
         title: "Tap to Wake",
+        icon: "hand.tap",
         keys: ["yZf3GTRMGTuwSV/lD7Cagw"], // DeviceSupportsTapToWake
         footer: "Adds Tap to Wake to Settings > Accessibility > Touch. Reboot to apply.",
         addedDefaultsKey: "TapToWakeAdded"
