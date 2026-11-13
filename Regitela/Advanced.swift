@@ -4,6 +4,9 @@ struct AdvancedView: View {
     @Binding var path: String
     @Binding var sandboxHandle: Int64?
 
+    // The field is multi-line, so Return can leave a newline in the path
+    private var target: String { path.trimmingCharacters(in: .whitespacesAndNewlines) }
+
     var body: some View {
         Form {
             Section("Target Path") {
@@ -29,9 +32,9 @@ struct AdvancedView: View {
 
             Section {
                 Button("Consume Sandbox Extension") {
-                    sandboxHandle = consumeExtension(path)
+                    sandboxHandle = consumeExtension(target)
                 }
-                .disabled(path.isEmpty)
+                .disabled(target.isEmpty)
                 .disabled(sandboxHandle ?? -255 > 0)
 
                 Button("Release Sandbox Extension") {
@@ -47,26 +50,26 @@ struct AdvancedView: View {
 
             Section("Utilities") {
                 NavigationLink {
-                    FileExplorerView(root: path)
+                    FileExplorerView(root: target)
                 } label: {
                     Label("Browse / Edit Files", systemImage: "folder")
                 }
-                .disabled(path.isEmpty)
-                ShareLink(item: URL(fileURLWithPath: path)) {
+                .disabled(target.isEmpty)
+                ShareLink(item: URL(fileURLWithPath: target)) {
                     Text("Share Contents")
                 }
-                .disabled(path.isEmpty)
+                .disabled(target.isEmpty)
             }
 
             Section {
                 Button("Find Containers (pathleak)") {
-                    leakPaths(path)
+                    leakPaths(target)
                 }
-                .disabled(path.isEmpty)
+                .disabled(target.isEmpty)
                 Button("List Folders (parentdir)") {
-                    listPaths(path)
+                    listPaths(target)
                 }
-                .disabled(path.isEmpty)
+                .disabled(target.isEmpty)
             } header: {
                 Text("Enumeration")
             } footer: {
