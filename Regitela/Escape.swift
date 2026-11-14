@@ -6,11 +6,24 @@ let accessibleGroup: String? = worse_query_group()
 let isUnsandboxed = (try? FileManager.default.contentsOfDirectory(atPath: "/private/var/containers/Shared/SystemGroup")) != nil
 
 private let unsandboxedHandle = Int64.max
+private let geodHandleBase: Int64 = 0x4000000000
 
 func issueSandboxExtension(for path: String) -> Int64 {
     if isUnsandboxed {
         return unsandboxedHandle
     }
+
+    // iOS 26 can't reach SystemGroup via an App Group; use the geod route instead.
+    if ProcessInfo.processInfo.operatingSystemVersion.majorVersion == 26
+        && path.contains("/containers/Shared/SystemGroup") {
+        let handle = geod_query(path)
+        print("geod handle: \(handle)")
+        if handle >= geodHandleBase {
+            print("geod granted path: \(geod_last_path() ?? "unknown")")
+        }
+        return handle
+    }
+
     guard let group = accessibleGroup else {
         print("no accessible app group! (check the app group entitlement)")
         return -1
@@ -95,6 +108,11 @@ func releaseSandboxExtension(_ handle: Int64) {
         return
     }
     if handle == unsandboxedHandle {
+        return
+    }
+    if handle >= geodHandleBase {
+        geod_release(handle)
+        print("released geod extension!")
         return
     }
     worse_query_release(handle)

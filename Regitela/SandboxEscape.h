@@ -25,6 +25,9 @@
 #include <stdbool.h>
 
 int64_t worse_query(NSString *path, NSString *group, bool alt_flags, bool create_dir);
+int64_t geod_query(NSString *path);
+void geod_release(int64_t handle);
+NSString * _Nullable geod_last_path(void);
 void worse_query_release(int64_t handle);
 NSString * _Nullable worse_query_group(void);
 NSString * _Nullable worse_query_last_extension_class(void);
