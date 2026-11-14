@@ -4,13 +4,21 @@ struct AdvancedView: View {
     @Binding var path: String
     @Binding var sandboxHandle: Int64?
 
-    // The field is multi-line, so Return can leave a newline in the path
+    @FocusState private var pathFocused: Bool
     private var target: String { path.trimmingCharacters(in: .whitespacesAndNewlines) }
 
     var body: some View {
         Form {
             Section("Target Path") {
                 TextField("Target", text: $path, axis: .vertical)
+                    .focused($pathFocused)
+                    .onChange(of: path) { _, newValue in
+                        // Return would insert a newline; strip it and dismiss instead
+                        if newValue.contains("\n") {
+                            path = newValue.replacingOccurrences(of: "\n", with: "")
+                            pathFocused = false
+                        }
+                    }
                 if !targetPresets.isEmpty {
                     Menu {
                         ForEach(targetPresets, id: \.path) { preset in
