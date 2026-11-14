@@ -42,20 +42,31 @@ bool regitela_kernel_available(void) {
 #endif
 }
 
+#if REGITELA_HAVE_KERNEL
+static bool g_attempted = false;
+static bool g_unlocked = false;
+#endif
+
 bool regitela_kernel_unlock(void) {
 #if !REGITELA_HAVE_KERNEL
     return false;
 #else
-    static bool attempted = false;
-    static bool unlocked = false;
-    if (attempted) return unlocked;
-    attempted = true;
+    if (g_attempted) return g_unlocked;
+    g_attempted = true;
 
     // kexploit_opa334() runs offsets_init(), which exits on an unsupported version.
     if (!regitela_kernel_available()) return false;
 
     kexploit_opa334();
-    unlocked = (patch_sandbox_ext() == 0);
-    return unlocked;
+    g_unlocked = (patch_sandbox_ext() == 0);
+    return g_unlocked;
+#endif
+}
+
+bool regitela_kernel_is_unlocked(void) {
+#if !REGITELA_HAVE_KERNEL
+    return false;
+#else
+    return g_unlocked;
 #endif
 }

@@ -9,7 +9,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                HomeView()
+                HomeView(console: console)
             }
             .tabItem { Label("Home", systemImage: "house") }
 
@@ -54,6 +54,7 @@ let targetPresets = isIOS27 || isUnsandboxed ? directPresets : presetPaths.filte
 let leakOnlyPresets = isUnsandboxed ? [] : presetPaths.filter { (!$0.iOS27Only || isIOS27) && !($0.parentAccess && isIOS27) }
 
 private struct HomeView: View {
+    let console: Console
     private let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
 
     var body: some View {
@@ -77,6 +78,18 @@ private struct HomeView: View {
                 .frame(maxWidth: .infinity)
                 .listRowBackground(Color.clear)
                 .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
+            }
+
+            if kernelAccess != nil {
+                Section {
+                    NavigationLink {
+                        UnlockView(console: console)
+                    } label: {
+                        Label("Unlock Kernel Access", systemImage: "lock.open")
+                    }
+                } footer: {
+                    Text("iOS 26.0.x reaches the tweaks below through a kernel exploit. Unlock here to run it with a log instead of pausing on first use.")
+                }
             }
 
             Section("Tweaks") {

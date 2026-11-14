@@ -12,4 +12,7 @@ bool regitela_kernel_available(void);
 // Unlock /private/var r/w for the process lifetime; idempotent, cached.
 bool regitela_kernel_unlock(void);
 
+// Whether unlock has already succeeded this launch (doesn't run the exploit).
+bool regitela_kernel_is_unlocked(void);
+
 #endif /* KernelBackend_h */
