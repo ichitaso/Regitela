@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var console = Console()
+    @StateObject private var kernel = KernelState()
     @State private var sandboxHandle: Int64?
     @State private var path = "/private/var/mobile/Containers/Shared/AppGroup/"
     private let group = accessibleGroup
@@ -9,7 +10,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                HomeView(console: console)
+                HomeView(console: console, kernel: kernel)
             }
             .tabItem { Label("Home", systemImage: "house") }
 
@@ -55,6 +56,7 @@ let leakOnlyPresets = isUnsandboxed ? [] : presetPaths.filter { (!$0.iOS27Only |
 
 private struct HomeView: View {
     let console: Console
+    @ObservedObject var kernel: KernelState
     private let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
 
     var body: some View {
@@ -83,31 +85,35 @@ private struct HomeView: View {
             if kernelAccess != nil {
                 Section {
                     NavigationLink {
-                        UnlockView(console: console)
+                        UnlockView(console: console, kernel: kernel)
                     } label: {
-                        Label("Unlock Kernel Access", systemImage: "lock.open")
+                        Label(kernel.unlocked ? "Kernel Access" : "Unlock Kernel Access",
+                              systemImage: kernel.unlocked ? "lock.open" : "lock")
+                        .foregroundStyle(kernel.unlocked ? AnyShapeStyle(.green) : AnyShapeStyle(.primary))
                     }
                 } footer: {
-                    Text("iOS 26.0.x reaches the tweaks below through a kernel exploit. Unlock here to run it with a log instead of pausing on first use.")
+                    Text("iOS 26.0.x reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.")
                 }
             }
 
-            Section("Tweaks") {
-                NavigationLink {
-                    SupervisedView()
-                } label: {
-                    Label("Supervised Mode", systemImage: "checkmark.shield")
-                }
-                NavigationLink {
-                    RegionView()
-                } label: {
-                    Label("Region", systemImage: "globe")
-                }
-                ForEach(GestaltFeature.all.filter(\.isVisible)) { feature in
+            if kernelAccess == nil || kernel.unlocked {
+                Section("Tweaks") {
                     NavigationLink {
-                        GestaltFeatureView(feature: feature)
+                        SupervisedView()
                     } label: {
-                        Label(feature.title, systemImage: feature.icon)
+                        Label("Supervised Mode", systemImage: "checkmark.shield")
+                    }
+                    NavigationLink {
+                        RegionView()
+                    } label: {
+                        Label("Region", systemImage: "globe")
+                    }
+                    ForEach(GestaltFeature.all.filter(\.isVisible)) { feature in
+                        NavigationLink {
+                            GestaltFeatureView(feature: feature)
+                        } label: {
+                            Label(feature.title, systemImage: feature.icon)
+                        }
                     }
                 }
             }

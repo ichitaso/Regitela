@@ -1,44 +1,63 @@
 import SwiftUI
+import Combine
 
-// Dopamine-style screen that runs the kernel exploit up front, with a live log,
-// so the pause on first use of a kernel-only feature isn't a silent freeze.
+// Shared kernel-unlock state so Home can reveal the tweaks once unlocked.
+final class KernelState: ObservableObject {
+    @Published var unlocked = regitela_kernel_is_unlocked()
+    @Published var running = false
+    @Published var failed = false
+
+    func unlock() {
+        guard !running, !unlocked else { return }
+        running = true
+        failed = false
+        DispatchQueue.global(qos: .userInitiated).async {
+            let ok = regitela_kernel_unlock()
+            DispatchQueue.main.async {
+                self.running = false
+                self.unlocked = ok
+                self.failed = !ok
+            }
+        }
+    }
+}
+
+// Dopamine-style gate: run the kernel exploit once, with a live log, before the
+// kernel-only tweaks become available. The exploit runs only from here.
 struct UnlockView: View {
     @ObservedObject var console: Console
-
-    private enum Phase { case idle, running, done, failed }
-    @State private var phase: Phase = regitela_kernel_is_unlocked() ? .done : .idle
+    @ObservedObject var kernel: KernelState
+    @Environment(\.dismiss) private var dismiss
 
     private let accent = Color(red: 0.30, green: 0.85, blue: 0.39)
 
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            VStack(spacing: 20) {
-                Spacer(minLength: 24)
-
-                Image(systemName: phase == .done ? "lock.open.fill" : "lock.fill")
-                    .font(.system(size: 60, weight: .thin))
-                    .foregroundStyle(phase == .failed ? .red : accent)
+            VStack(spacing: 16) {
+                Image(systemName: kernel.unlocked ? "lock.open.fill" : "lock.fill")
+                    .font(.system(size: 44, weight: .thin))
+                    .foregroundStyle(kernel.failed ? .red : accent)
                 Text(title)
-                    .font(.title2.weight(.semibold))
+                    .font(.headline)
                     .foregroundStyle(.white)
-                Text(subtitle)
-                    .font(.footnote)
-                    .foregroundStyle(.white.opacity(0.6))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
 
-                if phase != .idle {
-                    terminal
+                if !kernel.unlocked {
+                    actionButton(title: buttonTitle, filled: !kernel.running) { kernel.unlock() }
+                        .disabled(kernel.running)
                 }
 
-                Spacer(minLength: 24)
-                button
+                terminal
+
+                if kernel.unlocked {
+                    actionButton(title: String(localized: "Done"), filled: true) { dismiss() }
+                }
             }
             .padding()
         }
         .navigationTitle("Kernel Access")
         .navigationBarTitleDisplayMode(.inline)
+        .interactiveDismissDisabled(kernel.running)
     }
 
     private var terminal: some View {
@@ -54,57 +73,35 @@ struct UnlockView: View {
             }
             .onChange(of: console.output) { _, _ in proxy.scrollTo("end", anchor: .bottom) }
         }
+        .frame(maxHeight: .infinity)
         .background(Color.white.opacity(0.04))
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(accent.opacity(0.25)))
     }
 
-    private var button: some View {
-        Button(action: unlock) {
+    private func actionButton(title: String, filled: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
             HStack(spacing: 8) {
-                if phase == .running { ProgressView().tint(.black) }
-                Text(buttonTitle).font(.headline)
+                if kernel.running { ProgressView().tint(.black) }
+                Text(title).font(.headline)
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(phase == .done ? Color.gray.opacity(0.3) : accent)
-            .foregroundStyle(phase == .done ? .white : .black)
+            .padding(.vertical, 15)
+            .background(filled ? accent : Color.gray.opacity(0.3))
+            .foregroundStyle(filled ? .black : .white)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        }
-        .disabled(phase == .running || phase == .done)
-    }
-
-    private func unlock() {
-        phase = .running
-        DispatchQueue.global(qos: .userInitiated).async {
-            let ok = regitela_kernel_unlock()
-            DispatchQueue.main.async { phase = ok ? .done : .failed }
         }
     }
 
     private var title: String {
-        switch phase {
-        case .idle, .running: return String(localized: "Kernel Access")
-        case .done: return String(localized: "Unlocked")
-        case .failed: return String(localized: "Failed")
-        }
-    }
-
-    private var subtitle: String {
-        switch phase {
-        case .idle: return String(localized: "Unlock once to read and write system files. This runs a kernel exploit and takes a few seconds.")
-        case .running: return String(localized: "Running the kernel exploit…")
-        case .done: return String(localized: "System files are read/write for this session. The tweaks now apply instantly.")
-        case .failed: return String(localized: "The kernel exploit didn't succeed. You can try again.")
-        }
+        if kernel.unlocked { return String(localized: "Unlocked") }
+        if kernel.failed { return String(localized: "Failed") }
+        return String(localized: "Kernel Access")
     }
 
     private var buttonTitle: String {
-        switch phase {
-        case .idle: return String(localized: "Unlock")
-        case .running: return String(localized: "Unlocking…")
-        case .done: return String(localized: "Unlocked")
-        case .failed: return String(localized: "Try Again")
-        }
+        if kernel.running { return String(localized: "Unlocking…") }
+        if kernel.failed { return String(localized: "Try Again") }
+        return String(localized: "Unlock")
     }
 }

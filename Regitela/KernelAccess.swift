@@ -16,8 +16,10 @@ final class KernelAccess: SystemFileAccess {
             || path.contains("systemgroup.com.apple.mobilegestaltcache")
     }
 
+    // Only succeeds once unlocked from the Unlock screen; never runs the exploit
+    // itself, so tapping a tweak can't silently trigger it.
     func acquire(_ path: String) -> Int64 {
-        guard regitela_kernel_unlock() else { return -6 }
+        guard regitela_kernel_is_unlocked() else { return -6 }
         return kernelHandleBase // process-wide patch; no per-path resource
     }
 
