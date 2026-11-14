@@ -25,15 +25,19 @@ final class FileClipboard: ObservableObject {
 
 struct ContainerIcon: View {
     let identifier: String?
+    private let size: CGFloat = 40
 
     var body: some View {
         if let identifier, let icon = appIcon(forIdentifier: identifier) {
             Image(uiImage: icon)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 28, height: 28)
+                .frame(width: size, height: size)
+                .clipShape(RoundedRectangle(cornerRadius: size * 0.22, style: .continuous))
         } else {
             Image(systemName: "folder.fill")
+                .font(.system(size: size * 0.7))
+                .frame(width: size, height: size)
         }
     }
 }
