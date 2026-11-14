@@ -79,6 +79,8 @@ To add a region to the list, add an entry to `targetRegions` in `Regitela/Region
 
 - [ichitaso](https://github.com/ichitaso): Regitela
 - [forcequit (Taj C)](https://github.com/forcequitOS): [worse_query](https://github.com/forcequitOS/worse_query) and pathleak. Regitela is based on worse_query.
+- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun), the kernel read/write route used (with permission) for Supervised Mode and Region on iOS 26.0.x.
+- [opa334](https://github.com/opa334): XPF/ChOma and the kernel r/w technique behind darksword.
 
 ## License
 

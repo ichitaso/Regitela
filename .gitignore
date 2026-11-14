@@ -7,3 +7,7 @@ xcuserdata/
 DerivedData/
 build/
 .DS_Store
+
+# Vendored kernel exploit (licensed separately, kept out of the public repo)
+/kernel/
+/kernel-deps/

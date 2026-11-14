@@ -79,6 +79,8 @@ make package
 
 - [ichitaso](https://github.com/ichitaso): Regitela
 - [forcequit (Taj C)](https://github.com/forcequitOS): [worse_query](https://github.com/forcequitOS/worse_query) と pathleak。Regitela は worse_query をベースにしています。
+- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun)。iOS 26.0.x の Supervised Mode と地域変更に使用するカーネル読み書き経路（許可を得て使用）。
+- [opa334](https://github.com/opa334): XPF/ChOma、および darksword の基盤となるカーネル読み書き手法。
 
 ## ライセンス
 

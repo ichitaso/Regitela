@@ -13,12 +13,8 @@ func issueSandboxExtension(for path: String) -> Int64 {
         return unsandboxedHandle
     }
 
-    let handle = issueUserspaceExtension(for: path)
-    if handle > 0 {
-        return handle
-    }
-
-    // Userspace couldn't reach it; fall back to a kernel backend if registered.
+    // Try the kernel backend first for paths it claims; geod would return a
+    // useless handle for ConfigurationProfiles otherwise.
     if let backend = kernelAccess, backend.isAvailable, backend.canAccess(path) {
         let kernelHandle = backend.acquire(path)
         if kernelHandle > 0 {
@@ -27,7 +23,7 @@ func issueSandboxExtension(for path: String) -> Int64 {
         }
     }
 
-    return handle
+    return issueUserspaceExtension(for: path)
 }
 
 private func issueUserspaceExtension(for path: String) -> Int64 {
