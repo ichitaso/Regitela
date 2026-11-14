@@ -13,6 +13,24 @@ func issueSandboxExtension(for path: String) -> Int64 {
         return unsandboxedHandle
     }
 
+    let handle = issueUserspaceExtension(for: path)
+    if handle > 0 {
+        return handle
+    }
+
+    // Userspace couldn't reach it; fall back to a kernel backend if registered.
+    if let backend = kernelAccess, backend.isAvailable, backend.canAccess(path) {
+        let kernelHandle = backend.acquire(path)
+        if kernelHandle > 0 {
+            print("access via \(backend.name): \(path)")
+            return kernelHandle
+        }
+    }
+
+    return handle
+}
+
+private func issueUserspaceExtension(for path: String) -> Int64 {
     // iOS 26 can't reach SystemGroup via an App Group; use the geod route instead.
     if ProcessInfo.processInfo.operatingSystemVersion.majorVersion == 26
         && path.contains("/containers/Shared/SystemGroup") {
@@ -108,6 +126,11 @@ func releaseSandboxExtension(_ handle: Int64) {
         return
     }
     if handle == unsandboxedHandle {
+        return
+    }
+    if handle >= kernelHandleBase {
+        kernelAccess?.release(handle)
+        print("released kernel access!")
         return
     }
     if handle >= geodHandleBase {
