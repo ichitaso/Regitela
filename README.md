@@ -32,7 +32,7 @@ Supports iOS 17.0 - 18.7.1, 26.0 - 26.7.2 and 27.0 - 27.2.1. iOS 17/18 and 26.0.
 ## Features
 
 - **Supervised Mode**: turn it on or off. Quit the Settings app to apply.
-- **Region**: change the region code and sales region in the MobileGestalt cache to a region chosen from a list (US LL/A by default; also JP, CN, HK, TW, KR, GB, DE, FR, CA, AU, SG, IN, VN). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
+- **Region**: change the region code and sales region in the MobileGestalt cache to a region chosen from a list (US LL/A by default; also JP, CN, HK, TW, KR, GB, DE, FR, CA, AU, SG, IN, VN, AE). Reboot to apply; the change stays after later reboots. The original values are backed up and can be restored.
 - **Charge Limit**: add the charge limit option to Settings > Battery > Charging on devices that don't have it. Reboot to apply. Whether charging actually stops at the limit depends on the device.
 - **Always On Display**: add Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in.
 - **Tap to Wake**: add Tap to Wake to Settings > Accessibility > Touch on devices that don't have it. Reboot to apply.

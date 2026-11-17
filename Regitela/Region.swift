@@ -23,6 +23,7 @@ private let targetRegions = [
     TargetRegion(country: "SG", code: "ZA"),
     TargetRegion(country: "IN", code: "HN"),
     TargetRegion(country: "VN", code: "VN"),
+    TargetRegion(country: "AE", code: "AE"),
 ]
 
 let gestaltPlist = ContainerPlist(
