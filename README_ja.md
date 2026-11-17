@@ -13,13 +13,13 @@ iOS 17.0 - 18.7.1、26.0 - 26.7.2、27.0 - 27.2.1 に対応。iOS 17/18 と 26.0
 ## インストール
 
 > [!IMPORTANT]
-> **IPA は [Impactor](https://github.com/claration/impactor/releases) でインストールしてください。Sideloadly でインストールすると Regitela は動作しません。**
+> **IPA は [Impactor](https://github.com/claration/impactor/releases) か [AltStore Classic](https://altstore.io) でインストールしてください。Sideloadly でインストールすると Regitela は動作しません。**
 >
-> Regitela が worse_query を使うには App Group の entitlement が必要です。Sideloadly はこれを外して署名するため、「no accessible app group」や「Couldn't get access to the container」のエラーで全機能が動きません。Impactor は App Group を残したまま署名します。
+> Regitela が worse_query を使うには App Group の entitlement が必要です。Sideloadly はこれを外して署名するため、「no accessible app group」や「Couldn't get access to the container」のエラーで全機能が動きません。Impactor と AltStore Classic は App Group を残したまま署名します。
 
 1. [Releases](../../releases) ページから `Regitela_<version>.ipa` をダウンロードします。
-2. [Impactor](https://github.com/claration/impactor/releases) でインストールします。
-3. Regitela を開きます。ログタブに `app group: none` と表示された場合は、署名の際に App Group が外れています。Impactor でインストールし直してください。
+2. [Impactor](https://github.com/claration/impactor/releases) か [AltStore Classic](https://altstore.io) でインストールします。
+3. Regitela を開きます。ログタブに `app group: none` と表示された場合は、署名の際に App Group が外れています。Impactor か AltStore Classic でインストールし直してください。
 
 ## ご利用の前に
 
@@ -67,7 +67,7 @@ make package
 ## よくある質問
 
 1. **何も動作せず、ログタブに「no accessible app group」と表示される。**
-   App Group なしで署名されています。Sideloadly でインストールするとこうなります。[Impactor](https://github.com/claration/impactor/releases) でインストールし直してください。
+   App Group なしで署名されています。Sideloadly でインストールするとこうなります。[Impactor](https://github.com/claration/impactor/releases) か [AltStore Classic](https://altstore.io) でインストールし直してください。
 2. **Xcode でビルドしたら「Couldn't get access to the container (handle -1)」と表示される。**
    Xcode で署名する際に App Group が含まれていません。Signing & Capabilities で自分のチームに登録した App Group を追加してチェックを入れ、ビルドし直してください。Regitela は entitlements からグループ名を読み取るので、名前は何でも構いません。ログタブに `app group: <グループ名>` と表示されれば正常です。
 3. **iOS 26 で Tweak やブラウズが動作しない。**

@@ -13,13 +13,13 @@ Supports iOS 17.0 - 18.7.1, 26.0 - 26.7.2 and 27.0 - 27.2.1. iOS 17/18 and 26.0.
 ## Installation
 
 > [!IMPORTANT]
-> **Install the IPA with [Impactor](https://github.com/claration/impactor/releases). Regitela does not work when installed with Sideloadly.**
+> **Install the IPA with [Impactor](https://github.com/claration/impactor/releases) or [AltStore Classic](https://altstore.io). Regitela does not work when installed with Sideloadly.**
 >
-> Regitela needs its App Group entitlement for worse_query. Sideloadly signs the app without it, so every feature fails with "no accessible app group" and "Couldn't get access to the container". Impactor keeps the App Group when it signs the app.
+> Regitela needs its App Group entitlement for worse_query. Sideloadly signs the app without it, so every feature fails with "no accessible app group" and "Couldn't get access to the container". Impactor and AltStore Classic keep the App Group when they sign the app.
 
 1. Download `Regitela_<version>.ipa` from the [Releases](../../releases) page.
-2. Install it with [Impactor](https://github.com/claration/impactor/releases).
-3. Open Regitela. If the Log tab shows `app group: none`, the App Group was lost while signing. Reinstall with Impactor.
+2. Install it with [Impactor](https://github.com/claration/impactor/releases) or [AltStore Classic](https://altstore.io).
+3. Open Regitela. If the Log tab shows `app group: none`, the App Group was lost while signing. Reinstall with Impactor or AltStore Classic.
 
 ## Before You Begin
 
@@ -67,7 +67,7 @@ To add a region to the list, add an entry to `targetRegions` in `Regitela/Region
 ## FAQ
 
 1. **Nothing works, and the Log tab shows "no accessible app group".**
-   The app was signed without its App Group, which happens with Sideloadly. Reinstall it with [Impactor](https://github.com/claration/impactor/releases).
+   The app was signed without its App Group, which happens with Sideloadly. Reinstall it with [Impactor](https://github.com/claration/impactor/releases) or [AltStore Classic](https://altstore.io).
 2. **I built it with Xcode and get "Couldn't get access to the container (handle -1)".**
    The App Group was not included when Xcode signed the app. In Signing & Capabilities, add an App Group registered to your team and make sure it is checked, then build again. Any group name works, because Regitela reads it from its entitlements. The Log tab should show `app group: <your group>`.
 3. **The tweaks or Browse don't work on iOS 26.**
