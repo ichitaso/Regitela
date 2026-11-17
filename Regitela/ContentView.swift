@@ -14,10 +14,12 @@ struct ContentView: View {
             }
             .tabItem { Label("Home", systemImage: "house") }
 
-            NavigationStack {
-                AdvancedView(path: $path, sandboxHandle: $sandboxHandle)
+            if !needsKernel || kernel.unlocked {
+                NavigationStack {
+                    AdvancedView(path: $path, sandboxHandle: $sandboxHandle)
+                }
+                .tabItem { Label("Advanced", systemImage: "wrench.and.screwdriver") }
             }
-            .tabItem { Label("Advanced", systemImage: "wrench.and.screwdriver") }
 
             NavigationStack {
                 LogView(console: console)
@@ -48,15 +50,16 @@ let presetPaths: [Preset] = [
 ]
 let isIOS27 = ProcessInfo.processInfo.operatingSystemVersion.majorVersion >= 27
 
-// iOS 17/18 without a jailbreak: worse_query and geod don't work, so everything goes through the kernel unlock.
-let isKernelOnly = !isUnsandboxed && kernelAccess != nil && ProcessInfo.processInfo.operatingSystemVersion.majorVersion < 26
+// Below iOS 26 worse_query and geod don't work, so only the kernel unlock gets in.
+private let needsKernel = !isUnsandboxed && ProcessInfo.processInfo.operatingSystemVersion.majorVersion < 26
+let isKernelOnly = needsKernel && kernelAccess != nil
 private let hasFullAccess = isUnsandboxed || isKernelOnly
 
 let directPresets = hasFullAccess ? presetPaths : presetPaths.filter { $0.parentAccess && isIOS27 }
 
 let targetPresets = isIOS27 || hasFullAccess ? directPresets : presetPaths.filter { !$0.iOS27Only }
 
-let leakOnlyPresets = hasFullAccess ? [] : presetPaths.filter { (!$0.iOS27Only || isIOS27) && !($0.parentAccess && isIOS27) }
+let leakOnlyPresets = hasFullAccess || needsKernel ? [] : presetPaths.filter { (!$0.iOS27Only || isIOS27) && !($0.parentAccess && isIOS27) }
 
 private struct HomeView: View {
     let console: Console
@@ -107,7 +110,7 @@ private struct HomeView: View {
                 }
             }
 
-            if kernelAccess == nil || kernel.unlocked {
+            if (kernelAccess == nil && !needsKernel) || kernel.unlocked {
                 Section("Tweaks") {
                     NavigationLink {
                         SupervisedView()
