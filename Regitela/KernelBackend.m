@@ -40,10 +40,12 @@ static bool kernel_supported(void) {
 #if !REGITELA_HAVE_KERNEL
     return false;
 #else
-    // iOS 17.0 up to (not including) 26.1.
+    // iOS 17.0 - 18.7.1 and 26.0.x.
     NSString *v = [[UIDevice currentDevice] systemVersion];
     if ([v compare:@"17.0" options:NSNumericSearch] == NSOrderedAscending) return false;
     if ([v compare:@"26.1" options:NSNumericSearch] != NSOrderedAscending) return false;
+    // Patched in 18.7.2
+    if ([v compare:@"18.7.2" options:NSNumericSearch] != NSOrderedAscending && [v compare:@"26.0" options:NSNumericSearch] == NSOrderedAscending) return false;
 
     cpu_subtype_t fam = 0;
     size_t sz = sizeof(fam);

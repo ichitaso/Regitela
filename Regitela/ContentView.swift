@@ -99,7 +99,7 @@ private struct HomeView: View {
                         .foregroundStyle(kernel.unlocked ? AnyShapeStyle(.green) : AnyShapeStyle(.primary))
                     }
                 } footer: {
-                    Text("\(isKernelOnly ? "iOS 17–18" : "iOS 26.0.x") reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.")
+                    Text("\(isKernelOnly ? "iOS 17-18" : "iOS 26.0.x") reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.")
                 }
             }
 
