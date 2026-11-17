@@ -46,7 +46,7 @@
 | IPA (sideload) | 26.0 - 26.7.2, 27.0 - 27.2 | The tweaks and Browse need iOS 27 |
 
 > [!NOTE]
-> Versions not listed are unsupported. worse_query may be patched in a future iOS update.
+> Versions not listed are unsupported. iOS 27.3 beta 2 patches worse_query, so Regitela won't work on iOS 27.3 or later. Don't update if you want to keep using it. Later iOS 26 updates may get the same fix.
 
 ## Building
 
