@@ -11,7 +11,7 @@ struct HelpView: View {
                     .foregroundStyle(.red)
             }
             topic("About", systemImage: "info.circle",
-                  "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 26 and 27. Browse needs iOS 27. The Tweaks work on iOS 27, and on supported iOS 26.0.x devices after you Unlock kernel access. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3).")
+                  "Regitela uses the worse_query sandbox escape to read and change files outside its own sandbox, without a jailbreak. It works on iOS 17, 18, 26 and 27. Browse isn't available on iOS 26. The Tweaks work on iOS 27, and on supported iOS 26.0.x devices after you Unlock kernel access. On iOS 17 and 18, Unlock kernel access on a supported device to use the Tweaks, Browse and Advanced. On a rootless jailbreak (iOS 17 or later), install the .deb instead: it runs without a sandbox, so every feature works. Based on worse_query by forcequit (GPLv3).")
             topic("Supervised Mode", systemImage: "checkmark.shield",
                   "Turns Supervised Mode on or off by editing CloudConfigurationDetails.plist. Quit the Settings app to apply the change. Don't use it on a device that is managed by MDM.")
             topic("Region", systemImage: "globe",
