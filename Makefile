@@ -46,6 +46,10 @@ after-package::
 		"Author: ichitaso" \
 		"Section: Applications" \
 		"Depends: firmware (>= 17.0), uikittools" \
+		"Depiction: https://cydia.ichitaso.com/depiction/regitela.html" \
+		"SileoDepiction: https://cydia.ichitaso.com/depiction/regitela.json" \
+		"Homepage: https://github.com/ichitaso/Regitela" \
+		"Icon: https://cydia.ichitaso.com/icons/Regitela.png" \
 		> $(DEB_ROOT)/DEBIAN/control
 	printf '#!/bin/sh\nuicache -p /var/jb/Applications/$(XCODEPROJ_NAME).app\nexit 0\n' > $(DEB_ROOT)/DEBIAN/postinst
 	printf '#!/bin/sh\nif [ "$$1" = remove ] || [ "$$1" = purge ]; then\n\tuicache -u /var/jb/Applications/$(XCODEPROJ_NAME).app\nfi\nexit 0\n' > $(DEB_ROOT)/DEBIAN/prerm
