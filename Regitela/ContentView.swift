@@ -48,11 +48,15 @@ let presetPaths: [Preset] = [
 ]
 let isIOS27 = ProcessInfo.processInfo.operatingSystemVersion.majorVersion >= 27
 
-let directPresets = isUnsandboxed ? presetPaths : presetPaths.filter { $0.parentAccess && isIOS27 }
+// iOS 17/18 without a jailbreak: worse_query and geod don't work, so everything goes through the kernel unlock.
+let isKernelOnly = !isUnsandboxed && kernelAccess != nil && ProcessInfo.processInfo.operatingSystemVersion.majorVersion < 26
+private let hasFullAccess = isUnsandboxed || isKernelOnly
 
-let targetPresets = isIOS27 || isUnsandboxed ? directPresets : presetPaths.filter { !$0.iOS27Only }
+let directPresets = hasFullAccess ? presetPaths : presetPaths.filter { $0.parentAccess && isIOS27 }
 
-let leakOnlyPresets = isUnsandboxed ? [] : presetPaths.filter { (!$0.iOS27Only || isIOS27) && !($0.parentAccess && isIOS27) }
+let targetPresets = isIOS27 || hasFullAccess ? directPresets : presetPaths.filter { !$0.iOS27Only }
+
+let leakOnlyPresets = hasFullAccess ? [] : presetPaths.filter { (!$0.iOS27Only || isIOS27) && !($0.parentAccess && isIOS27) }
 
 private struct HomeView: View {
     let console: Console
@@ -92,7 +96,7 @@ private struct HomeView: View {
                         .foregroundStyle(kernel.unlocked ? AnyShapeStyle(.green) : AnyShapeStyle(.primary))
                     }
                 } footer: {
-                    Text("iOS 26.0.x reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.")
+                    Text("\(isKernelOnly ? "iOS 17–18" : "iOS 26.0.x") reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.")
                 }
             }
 
@@ -118,7 +122,7 @@ private struct HomeView: View {
                 }
             }
             
-            if !directPresets.isEmpty {
+            if !directPresets.isEmpty && (!isKernelOnly || kernel.unlocked) {
                 Section("Browse") {
                     ForEach(directPresets, id: \.path) { preset in
                         NavigationLink {

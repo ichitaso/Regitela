@@ -955,108 +955,108 @@
         }
       }
     },
-    "iOS 26.0.x reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.": {
+    "%@ reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "على iOS 26.0.x يتم الوصول إلى التعديلات عبر ثغرة في النواة. قم بإلغاء القفل مرة واحدة لتفعيلها؛ تعمل الثغرة هنا فقط وليس عند الضغط على تعديل."
+            "value": "على %@ يتم الوصول إلى التعديلات عبر ثغرة في النواة. قم بإلغاء القفل مرة واحدة لتفعيلها؛ تعمل الثغرة هنا فقط وليس عند الضغط على تعديل."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unter iOS 26.0.x werden die Anpassungen über einen Kernel-Exploit erreicht. Einmal entsperren, um sie zu aktivieren; der Exploit läuft nur hier, nicht beim Antippen einer Anpassung."
+            "value": "Unter %@ werden die Anpassungen über einen Kernel-Exploit erreicht. Einmal entsperren, um sie zu aktivieren; der Exploit läuft nur hier, nicht beim Antippen einer Anpassung."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26.0.x reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak."
+            "value": "%@ reaches the tweaks through a kernel exploit. Unlock once to enable them; the exploit runs only here, not when you tap a tweak."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "En iOS 26.0.x los ajustes se alcanzan mediante un exploit del kernel. Desbloquea una vez para activarlos; el exploit solo se ejecuta aquí, no al tocar un ajuste."
+            "value": "En %@ los ajustes se alcanzan mediante un exploit del kernel. Desbloquea una vez para activarlos; el exploit solo se ejecuta aquí, no al tocar un ajuste."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sous iOS 26.0.x, les réglages sont atteints via un exploit du noyau. Déverrouillez une fois pour les activer ; l’exploit s’exécute uniquement ici, pas lorsque vous touchez un réglage."
+            "value": "Sous %@, les réglages sont atteints via un exploit du noyau. Déverrouillez une fois pour les activer ; l’exploit s’exécute uniquement ici, pas lorsque vous touchez un réglage."
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "Di iOS 26.0.x, Tweak diakses melalui eksploit kernel. Buka kunci sekali untuk mengaktifkannya; eksploit hanya berjalan di sini, bukan saat Anda mengetuk Tweak."
+            "value": "Di %@, Tweak diakses melalui eksploit kernel. Buka kunci sekali untuk mengaktifkannya; eksploit hanya berjalan di sini, bukan saat Anda mengetuk Tweak."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Su iOS 26.0.x i tweak vengono raggiunti tramite un exploit del kernel. Sblocca una volta per abilitarli; l’exploit viene eseguito solo qui, non quando tocchi un tweak."
+            "value": "Su %@ i tweak vengono raggiunti tramite un exploit del kernel. Sblocca una volta per abilitarli; l’exploit viene eseguito solo qui, non quando tocchi un tweak."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26.0.x では、カーネルエクスプロイトを使って Tweak にアクセスします。一度解除すると有効になります。エクスプロイトはここでのみ実行され、Tweak をタップしたときには実行されません。"
+            "value": "%@ では、カーネルエクスプロイトを使って Tweak にアクセスします。一度解除すると有効になります。エクスプロイトはここでのみ実行され、Tweak をタップしたときには実行されません。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26.0.x에서는 커널 익스플로잇을 통해 트윅에 접근합니다. 한 번 잠금 해제하면 활성화됩니다. 익스플로잇은 여기에서만 실행되며, 트윅을 탭할 때는 실행되지 않습니다."
+            "value": "%@에서는 커널 익스플로잇을 통해 트윅에 접근합니다. 한 번 잠금 해제하면 활성화됩니다. 익스플로잇은 여기에서만 실행되며, 트윅을 탭할 때는 실행되지 않습니다."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Op iOS 26.0.x worden de tweaks bereikt via een kernel-exploit. Ontgrendel één keer om ze in te schakelen; de exploit draait alleen hier, niet wanneer je op een tweak tikt."
+            "value": "Op %@ worden de tweaks bereikt via een kernel-exploit. Ontgrendel één keer om ze in te schakelen; de exploit draait alleen hier, niet wanneer je op een tweak tikt."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "No iOS 26.0.x, os ajustes são acessados por meio de um exploit do kernel. Desbloqueie uma vez para ativá-los; o exploit é executado apenas aqui, não ao tocar em um ajuste."
+            "value": "No %@, os ajustes são acessados por meio de um exploit do kernel. Desbloqueie uma vez para ativá-los; o exploit é executado apenas aqui, não ao tocar em um ajuste."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "На iOS 26.0.x твики доступны через эксплойт ядра. Разблокируйте один раз, чтобы включить их; эксплойт выполняется только здесь, а не при нажатии на твик."
+            "value": "На %@ твики доступны через эксплойт ядра. Разблокируйте один раз, чтобы включить их; эксплойт выполняется только здесь, а не при нажатии на твик."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "บน iOS 26.0.x การเข้าถึง Tweak ทำผ่านช่องโหว่เคอร์เนล ปลดล็อกหนึ่งครั้งเพื่อเปิดใช้งาน ช่องโหว่จะทำงานที่นี่เท่านั้น ไม่ใช่เมื่อแตะ Tweak"
+            "value": "บน %@ การเข้าถึง Tweak ทำผ่านช่องโหว่เคอร์เนล ปลดล็อกหนึ่งครั้งเพื่อเปิดใช้งาน ช่องโหว่จะทำงานที่นี่เท่านั้น ไม่ใช่เมื่อแตะ Tweak"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "iOS 26.0.x’te ayarlamalara bir çekirdek açığı üzerinden erişilir. Etkinleştirmek için bir kez kilidi açın; açık yalnızca burada çalışır, bir ayarlamaya dokunduğunuzda değil."
+            "value": "%@’te ayarlamalara bir çekirdek açığı üzerinden erişilir. Etkinleştirmek için bir kez kilidi açın; açık yalnızca burada çalışır, bir ayarlamaya dokunduğunuzda değil."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Trên iOS 26.0.x, các tinh chỉnh được truy cập thông qua một lỗ hổng kernel. Mở khóa một lần để bật chúng; lỗ hổng chỉ chạy ở đây, không phải khi bạn chạm vào một tinh chỉnh."
+            "value": "Trên %@, các tinh chỉnh được truy cập thông qua một lỗ hổng kernel. Mở khóa một lần để bật chúng; lỗ hổng chỉ chạy ở đây, không phải khi bạn chạm vào một tinh chỉnh."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 iOS 26.0.x 上，调整通过内核漏洞来访问。解锁一次即可启用；漏洞仅在此处运行，点按调整时不会运行。"
+            "value": "在 %@ 上，调整通过内核漏洞来访问。解锁一次即可启用；漏洞仅在此处运行，点按调整时不会运行。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 iOS 26.0.x 上，調整透過核心漏洞來存取。解鎖一次即可啟用；漏洞僅在此處執行，點按調整時不會執行。"
+            "value": "在 %@ 上，調整透過核心漏洞來存取。解鎖一次即可啟用；漏洞僅在此處執行，點按調整時不會執行。"
           }
         }
       }

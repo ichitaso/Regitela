@@ -10,9 +10,11 @@ final class KernelAccess: SystemFileAccess {
 
     // geod is read-only here: ConfigurationProfiles EPERMs outright and
     // MobileGestalt writes are denied, so claim both groups for the kernel.
+    // Below iOS 26 neither works, so the kernel takes every path.
     func canAccess(_ path: String) -> Bool {
         guard isAvailable else { return false }
-        return path.contains("systemgroup.com.apple.configurationprofiles")
+        return isKernelOnly
+            || path.contains("systemgroup.com.apple.configurationprofiles")
             || path.contains("systemgroup.com.apple.mobilegestaltcache")
     }
 
