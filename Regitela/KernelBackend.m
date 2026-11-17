@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <sys/sysctl.h>
-#import <unistd.h>
+#import <mach-o/dyld.h>
 
 // Forward-declare to avoid pulling in the exploit's logging printf macro.
 #if __has_include("kexploit/offsets.h")
@@ -24,8 +24,13 @@ int patch_sandbox_ext(void); // 0 = ok
 #define CPUFAMILY_ARM_DONAN  0x6f5129ac // M4
 #endif
 
+// /var/jb outlives a reboot, so look for the jailbreak's injected libraries
 static bool regitela_jailbroken(void) {
-    return access("/var/jb", F_OK) == 0;
+    for (uint32_t i = 0; i < _dyld_image_count(); i++) {
+        const char *name = _dyld_get_image_name(i);
+        if (name && (strstr(name, "systemhook.dylib") || strstr(name, "/var/jb/") || strstr(name, "/procursus/"))) return true;
+    }
+    return false;
 }
 
 static bool kernel_supported(void) {
