@@ -160,9 +160,13 @@ private struct HomeView: View {
         }
         .navigationTitle("Regitela")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .navigationBar)
+        // Hiding it breaks the iPadOS 18 tab bar
+        .toolbar(isPadTabBarInNavBar ? .automatic : .hidden, for: .navigationBar)
     }
 }
+
+private let isPadTabBarInNavBar = UIDevice.current.userInterfaceIdiom == .pad
+    && ProcessInfo.processInfo.operatingSystemVersion.majorVersion == 18
 
 private struct LogView: View {
     @ObservedObject var console: Console
