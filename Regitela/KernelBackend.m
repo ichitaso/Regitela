@@ -23,6 +23,9 @@ int patch_sandbox_ext(void); // 0 = ok
 #ifndef CPUFAMILY_ARM_DONAN
 #define CPUFAMILY_ARM_DONAN  0x6f5129ac // M4
 #endif
+#ifndef CPUFAMILY_ARM_HURRICANE
+#define CPUFAMILY_ARM_HURRICANE 0x67ceee93 // A10
+#endif
 
 // /var/jb outlives a reboot, so look for the jailbreak's injected libraries
 static bool regitela_jailbroken(void) {
@@ -46,6 +49,10 @@ static bool kernel_supported(void) {
     size_t sz = sizeof(fam);
     sysctlbyname("hw.cpufamily", &fam, &sz, NULL, 0);
     if (fam == CPUFAMILY_ARM_TUPAI || fam == CPUFAMILY_ARM_TAHITI || fam == CPUFAMILY_ARM_DONAN) {
+        return false;
+    }
+    // A10 hangs on iOS 17
+    if (fam == CPUFAMILY_ARM_HURRICANE && [v compare:@"18.0" options:NSNumericSearch] == NSOrderedAscending) {
         return false;
     }
     return true;
