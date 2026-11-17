@@ -43,9 +43,13 @@
 
 | Install | iOS | Notes |
 |---|---|---|
-| IPA (sideload) | 26.0 - 26.7.2, 27.0 - 27.2 | The tweaks and Browse need iOS 27 |
+| IPA (sideload) | 17.0 - 18.x | Unlock kernel access first. Not available on A10 with iOS 17, A18, M4 or jailbroken devices |
+| IPA (sideload) | 26.0 - 26.7.2 | The tweaks need Unlock kernel access (26.0.x only). Browse isn't available |
+| IPA (sideload) | 27.0 - 27.2 | Every feature works |
 
 > [!NOTE]
+> Tested on iOS 17/18: iPad Pro 11-inch (A12X, iOS 17.0) and iPad (7th generation, A10, iOS 18.3.2). Other devices are untested.
+>
 > Versions not listed are unsupported. iOS 27.3 beta 2 patches worse_query, so Regitela won't work on iOS 27.3 or later. Don't update if you want to keep using it. Later iOS 26 updates may get the same fix.
 
 ## Building
@@ -67,7 +71,7 @@ To add a region to the list, add an entry to `targetRegions` in `Regitela/Region
 2. **I built it with Xcode and get "Couldn't get access to the container (handle -1)".**
    The App Group was not included when Xcode signed the app. In Signing & Capabilities, add an App Group registered to your team and make sure it is checked, then build again. Any group name works, because Regitela reads it from its entitlements. The Log tab should show `app group: <your group>`.
 3. **The tweaks or Browse don't work on iOS 26.**
-   They need iOS 27. On iOS 26, worse_query can't reach the SystemGroup containers.
+   On iOS 26, worse_query can't reach the SystemGroup containers. On iOS 26.0.x, Unlock kernel access to use the tweaks. Browse needs iOS 27, or iOS 17/18 after Unlock.
 4. **The Containers scan takes a long time.**
    pathleak brute-forces inodes, so the first scan is slow. The results are kept until the app quits.
 5. **Some containers show a bundle ID instead of an app name.**
@@ -79,7 +83,8 @@ To add a region to the list, add an entry to `targetRegions` in `Regitela/Region
 
 - [ichitaso](https://github.com/ichitaso): Regitela
 - [forcequit (Taj C)](https://github.com/forcequitOS): [worse_query](https://github.com/forcequitOS/worse_query) and pathleak. Regitela is based on worse_query.
-- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun), the kernel read/write route used (with permission) for Supervised Mode and Region on iOS 26.0.x.
+- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun), the kernel read/write route used (with permission) on iOS 17, 18 and 26.0.x.
+- [TheRealClarity](https://github.com/TheRealClarity): [ClearSword](https://github.com/TheRealClarity/ClearSword), whose fix for the kernel route is included.
 - [opa334](https://github.com/opa334): XPF/ChOma and the kernel r/w technique behind darksword.
 
 ## License

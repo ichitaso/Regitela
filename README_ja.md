@@ -43,9 +43,13 @@
 
 | インストール方法 | iOS | 備考 |
 |---|---|---|
-| IPA（サイドロード） | 26.0 - 26.7.2、27.0 - 27.2 | Tweak とブラウズには iOS 27 が必要 |
+| IPA（サイドロード） | 17.0 - 18.x | 先にカーネルアクセスの解除が必要。iOS 17 の A10、A18、M4、脱獄済みの端末では使えません |
+| IPA（サイドロード） | 26.0 - 26.7.2 | Tweak にはカーネルアクセスの解除が必要（26.0.x のみ）。ブラウズは使えません |
+| IPA（サイドロード） | 27.0 - 27.2 | すべての機能が使えます |
 
 > [!NOTE]
+> iOS 17/18 の動作確認: iPad Pro 11インチ（A12X、iOS 17.0）、iPad（第7世代、A10、iOS 18.3.2）。その他の端末は未確認です。
+>
 > 記載のないバージョンには対応していません。iOS 27.3 beta 2 で worse_query が修正されたため、iOS 27.3 以降では動作しません。使い続けたい場合はアップデートしないでください。今後の iOS 26 のアップデートにも同じ修正が入る可能性があります。
 
 ## ビルド
@@ -67,7 +71,7 @@ make package
 2. **Xcode でビルドしたら「Couldn't get access to the container (handle -1)」と表示される。**
    Xcode で署名する際に App Group が含まれていません。Signing & Capabilities で自分のチームに登録した App Group を追加してチェックを入れ、ビルドし直してください。Regitela は entitlements からグループ名を読み取るので、名前は何でも構いません。ログタブに `app group: <グループ名>` と表示されれば正常です。
 3. **iOS 26 で Tweak やブラウズが動作しない。**
-   これらには iOS 27 が必要です。iOS 26 では、worse_query で SystemGroup のコンテナにアクセスできません。
+   iOS 26 では、worse_query で SystemGroup のコンテナにアクセスできません。iOS 26.0.x ではカーネルアクセスを解除すると Tweak が使えます。ブラウズには iOS 27、または解除後の iOS 17/18 が必要です。
 4. **コンテナのスキャンに時間がかかる。**
    pathleak は inode を総当たりで調べるため、初回のスキャンには時間がかかります。結果はアプリを終了するまで保持されます。
 5. **アプリ名ではなくバンドル ID で表示されるコンテナがある。**
@@ -79,7 +83,8 @@ make package
 
 - [ichitaso](https://github.com/ichitaso): Regitela
 - [forcequit (Taj C)](https://github.com/forcequitOS): [worse_query](https://github.com/forcequitOS/worse_query) と pathleak。Regitela は worse_query をベースにしています。
-- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun)。iOS 26.0.x の Supervised Mode と地域変更に使用するカーネル読み書き経路（許可を得て使用）。
+- [wh1te4ever](https://github.com/wh1te4ever): [darksword-kexploit-fun](https://github.com/wh1te4ever/darksword-kexploit-fun)。iOS 17、18、26.0.x で使用するカーネル読み書き経路（許可を得て使用）。
+- [TheRealClarity](https://github.com/TheRealClarity): [ClearSword](https://github.com/TheRealClarity/ClearSword)。カーネル経路の修正を取り込んでいます。
 - [opa334](https://github.com/opa334): XPF/ChOma、および darksword の基盤となるカーネル読み書き手法。
 
 ## ライセンス
