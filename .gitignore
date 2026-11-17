@@ -11,3 +11,6 @@ build/
 # Vendored kernel exploit (licensed separately, kept out of the public repo)
 /kernel/
 /kernel-deps/
+
+# Local release notes
+/HowToBuild.txt
