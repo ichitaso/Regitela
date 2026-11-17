@@ -100,6 +100,13 @@ private struct HomeView: View {
                 }
             }
 
+            if !isUnsandboxed && regitela_kernel_blocked_by_jailbreak() {
+                Section {
+                } footer: {
+                    Text("Kernel access is off on jailbroken devices, where the exploit can panic or hang the device.")
+                }
+            }
+
             if kernelAccess == nil || kernel.unlocked {
                 Section("Tweaks") {
                     NavigationLink {

@@ -9,6 +9,9 @@
 // True when the exploit is compiled in and the device/OS is supported.
 bool regitela_kernel_available(void);
 
+// Supported, but declined because the device is jailbroken.
+bool regitela_kernel_blocked_by_jailbreak(void);
+
 // Unlock /private/var r/w for the process lifetime; idempotent, cached.
 bool regitela_kernel_unlock(void);
 

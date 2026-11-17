@@ -425,6 +425,112 @@
         }
       }
     },
+    "Kernel access is off on jailbroken devices, where the exploit can panic or hang the device.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الوصول إلى النواة معطّل على الأجهزة المكسور حمايتها، إذ قد تتسبب الثغرة في انهيار الجهاز أو تجمّده."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Kernel-Zugriff ist auf gejailbreakten Geräten deaktiviert, da der Exploit dort eine Kernel-Panic oder ein Einfrieren auslösen kann."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kernel access is off on jailbroken devices, where the exploit can panic or hang the device."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El acceso al kernel está desactivado en dispositivos con jailbreak, donde el exploit puede provocar un pánico del kernel o bloquear el dispositivo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’accès au noyau est désactivé sur les appareils jailbreakés, où l’exploit peut provoquer une panique du noyau ou figer l’appareil."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akses kernel dinonaktifkan pada perangkat yang di-jailbreak, karena eksploit dapat menyebabkan panic atau membuat perangkat macet."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’accesso al kernel è disattivato sui dispositivi con jailbreak, dove l’exploit può causare un kernel panic o bloccare il dispositivo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "脱獄済みのデバイスでは、エクスプロイトがパニックやフリーズを起こすことがあるため、カーネルアクセスは無効です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "탈옥된 기기에서는 익스플로잇이 패닉이나 멈춤을 일으킬 수 있으므로 커널 접근이 꺼져 있습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kerneltoegang is uitgeschakeld op gejailbreakte apparaten, waar de exploit een kernel panic of vastloper kan veroorzaken."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O acesso ao kernel fica desativado em dispositivos com jailbreak, onde o exploit pode causar um kernel panic ou travar o dispositivo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Доступ к ядру отключён на устройствах с джейлбрейком: там эксплойт может вызвать панику ядра или зависание устройства."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเข้าถึงเคอร์เนลถูกปิดบนอุปกรณ์ที่เจลเบรกแล้ว เนื่องจากช่องโหว่อาจทำให้อุปกรณ์แพนิกหรือค้าง"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jailbreak yapılmış cihazlarda çekirdek erişimi kapalıdır; bu cihazlarda açık, çekirdek paniğine veya donmaya yol açabilir."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quyền truy cập kernel bị tắt trên thiết bị đã jailbreak, vì lỗ hổng có thể gây panic hoặc treo thiết bị."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已越狱的设备上会关闭内核访问，因为漏洞可能导致设备崩溃或卡死。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已越獄的裝置上會關閉核心存取，因為漏洞可能導致裝置當機或卡住。"
+          }
+        }
+      }
+    },
     "Try Again": {
       "localizations": {
         "ar": {

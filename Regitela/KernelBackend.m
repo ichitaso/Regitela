@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <sys/sysctl.h>
+#import <unistd.h>
 
 // Forward-declare to avoid pulling in the exploit's logging printf macro.
 #if __has_include("kexploit/offsets.h")
@@ -23,7 +24,11 @@ int patch_sandbox_ext(void); // 0 = ok
 #define CPUFAMILY_ARM_DONAN  0x6f5129ac // M4
 #endif
 
-bool regitela_kernel_available(void) {
+static bool regitela_jailbroken(void) {
+    return access("/var/jb", F_OK) == 0;
+}
+
+static bool kernel_supported(void) {
 #if !REGITELA_HAVE_KERNEL
     return false;
 #else
@@ -40,6 +45,15 @@ bool regitela_kernel_available(void) {
     }
     return true;
 #endif
+}
+
+// Running the exploit on top of a jailbreak can panic or hang the device.
+bool regitela_kernel_available(void) {
+    return kernel_supported() && !regitela_jailbroken();
+}
+
+bool regitela_kernel_blocked_by_jailbreak(void) {
+    return kernel_supported() && regitela_jailbroken();
 }
 
 #if REGITELA_HAVE_KERNEL
