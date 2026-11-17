@@ -8,6 +8,8 @@
   A file explorer and tweak toolbox for iOS, built on the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape.
 </p>
 
+Supports iOS 17.0 - 18.7.1, 26.0 - 26.7.2 and 27.0 - 27.2.1. iOS 17/18 and 26.0.x need the kernel Unlock (not on A18, M4 or jailbroken devices).
+
 ## Installation
 
 > [!IMPORTANT]
@@ -43,14 +45,12 @@
 
 | Install | iOS | Notes |
 |---|---|---|
-| IPA (sideload) | 17.0 - 18.x | Unlock kernel access first. Not available on A10 with iOS 17, A18, M4 or jailbroken devices |
-| IPA (sideload) | 26.0 - 26.7.2 | The tweaks need Unlock kernel access (26.0.x only). Browse isn't available |
-| IPA (sideload) | 27.0 - 27.2 | Every feature works |
+| IPA (sideload) | 17.0 - 18.7.1 | Unlock first. Not on A10 with iOS 17, A18, M4 or jailbroken devices |
+| IPA (sideload) | 26.0 - 26.7.2 | Tweaks after Unlock (26.0.x only). No Browse |
+| IPA (sideload) | 27.0 - 27.2.1 | Every feature works |
 
 > [!NOTE]
-> Tested on iOS 17/18: iPad Pro 11-inch (A12X, iOS 17.0) and iPad (7th generation, A10, iOS 18.3.2). Other devices are untested.
->
-> Versions not listed are unsupported. iOS 27.3 beta 2 patches worse_query, so Regitela won't work on iOS 27.3 or later. Don't update if you want to keep using it. Later iOS 26 updates may get the same fix.
+> iOS 27.3 patches worse_query. Don't update if you want to keep using Regitela.
 
 ## Building
 
