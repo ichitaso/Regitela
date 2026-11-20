@@ -5,6 +5,10 @@
 <h1 align="center">Regitela</h1>
 
 <p align="center">
+  <a href="README.md">English</a> | <b>日本語</b>
+</p>
+
+<p align="center">
   <a href="https://github.com/forcequitOS/worse_query">worse_query</a> のサンドボックス脱出を利用した、iOS 向けのファイルエクスプローラー兼 Tweak ツールです。
 </p>
 

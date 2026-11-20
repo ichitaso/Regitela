@@ -5,6 +5,10 @@
 <h1 align="center">Regitela</h1>
 
 <p align="center">
+  <b>English</b> | <a href="README_ja.md">日本語</a>
+</p>
+
+<p align="center">
   A file explorer and tweak toolbox for iOS, built on the <a href="https://github.com/forcequitOS/worse_query">worse_query</a> sandbox escape.
 </p>
 
