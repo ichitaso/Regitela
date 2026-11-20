@@ -36,7 +36,7 @@ Supports iOS 17.0 - 18.7.1, 26.0 - 26.7.2 and 27.0 - 27.2.1. iOS 17/18 and 26.0.
 - **Charge Limit**: add the charge limit option to Settings > Battery > Charging on devices that don't have it. Reboot to apply. Whether charging actually stops at the limit depends on the device.
 - **Always On Display**: add Always On Display to Settings > Display & Brightness. Reboot to apply. On a display that can't drop to a low refresh rate, it uses much more battery and can cause burn-in.
 - **Tap to Wake**: add Tap to Wake to Settings > Accessibility > Touch on devices that don't have it. Reboot to apply.
-- **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, and delete files. Long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Folders of apps show the app icon, and a search bar filters the list.
+- **Browse**: open App Group and system containers directly. Edit and save text files, create new ones, import files from the Files app, and delete files. Long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Folders of apps show the app icon, and a search bar filters the list.
 - **Containers**: find the containers of apps, extensions and system services with pathleak. They are listed by app name or bundle ID, and you can open any of them.
 - **Advanced**: the original worse_query tools, which work on any path. You can hold a sandbox extension, share a path's contents and list the folders under a path.
 - Liquid Glass UI, localized into 17 languages.
