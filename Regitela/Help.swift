@@ -23,7 +23,7 @@ struct HelpView: View {
             topic("Tap to Wake", systemImage: "hand.tap",
                   "Adds Tap to Wake to Settings > Accessibility > Touch by adding a key to the MobileGestalt cache. Reboot to apply. Disable removes only the key this app added.")
             topic("Browse", systemImage: "folder",
-                  "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, or long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Use the ••• menu to paste or to create a new text file.")
+                  "Opens the App Group and system containers directly. Tap a folder to open it or a text file to edit and save it. Swipe left to delete, or long-press an item to rename, copy, move, compress or share it, or to extract a zip file. Use the ••• menu to import files, paste or create a new text file.")
             topic("Containers", systemImage: "shippingbox",
                   "Finds the containers of apps, extensions and system services with pathleak, and lists them by app name or bundle ID. The first scan takes a while; the results are kept until the app quits. Tap one to browse it, or search by name.")
             topic("Advanced", systemImage: "wrench.and.screwdriver",

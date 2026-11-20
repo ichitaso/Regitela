@@ -106,6 +106,7 @@ struct DirectoryView: View {
     @State private var renameText = ""
     @State private var search = ""
     @State private var working = false
+    @State private var importing = false
     @EnvironmentObject private var clipboard: FileClipboard
 
     private var filtered: [Entry] {
@@ -161,6 +162,11 @@ struct DirectoryView: View {
                     } label: {
                         Label("New Text File", systemImage: "doc.badge.plus")
                     }
+                    Button {
+                        importing = true
+                    } label: {
+                        Label("Import", systemImage: "square.and.arrow.down")
+                    }
                     if clipboard.url != nil {
                         Button(action: paste) {
                             Label("Paste", systemImage: "doc.on.clipboard")
@@ -175,6 +181,9 @@ struct DirectoryView: View {
                     Image(systemName: "ellipsis.circle")
                 }
             }
+        }
+        .fileImporter(isPresented: $importing, allowedContentTypes: [.item], allowsMultipleSelection: true) { result in
+            importFiles(result)
         }
         .alert("New Text File", isPresented: $showingNewFile) {
             TextField("Name", text: $newFileName)
@@ -359,6 +368,27 @@ struct DirectoryView: View {
             error = nil
         } catch {
             self.error = String(localized: "Failed to paste \(name): \(error.localizedDescription)")
+        }
+        load()
+    }
+
+    private func importFiles(_ result: Result<[URL], Error>) {
+        switch result {
+        case .success(let urls):
+            error = nil
+            for source in urls {
+                let scoped = source.startAccessingSecurityScopedResource()
+                defer { if scoped { source.stopAccessingSecurityScopedResource() } }
+                let destination = availableURL(for: source.lastPathComponent)
+                do {
+                    try FileManager.default.copyItem(at: source, to: destination)
+                    print("imported: \(source.path) -> \(destination.path)")
+                } catch {
+                    self.error = String(localized: "Failed to import \(source.lastPathComponent): \(error.localizedDescription)")
+                }
+            }
+        case .failure(let failure):
+            error = failure.localizedDescription
         }
         load()
     }
