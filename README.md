@@ -60,7 +60,7 @@ You need [Theos](https://theos.dev) and Xcode 26.
 make package
 ```
 
-This command creates both the IPA and the rootless .deb in `packages/`.
+This command creates the IPA and the rootless and roothide .debs in `packages/`.
 
 To add a region to the list, add an entry to `targetRegions` in `Regitela/Region.swift` (ISO country code and RegionCode, for example `JP` and `J`) and rebuild. The sales region (RegionInfo) is changed only under the key the device already has: on iOS 27, adding a key that isn't there makes iOS rebuild the cache at the next boot.
 

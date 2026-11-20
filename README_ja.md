@@ -60,7 +60,7 @@ iOS 17.0 - 18.7.1、26.0 - 26.7.2、27.0 - 27.2.1 に対応。iOS 17/18 と 26.0
 make package
 ```
 
-このコマンドで、IPA と rootless 用の .deb の両方が `packages/` に作成されます。
+このコマンドで、IPA と rootless 用・roothide 用の .deb が `packages/` に作成されます。
 
 一覧にない地域を追加したい場合は、`Regitela/Region.swift` の `targetRegions` に項目（ISO 国コードと地域コード。例: 日本は `JP` と `J`）を追加してビルドしてください。販売地域（RegionInfo）は、端末にすでにあるキーだけを書き換えます。iOS 27 では存在しないキーを追加すると、次の起動時に iOS がキャッシュを作り直してしまいます。
 
