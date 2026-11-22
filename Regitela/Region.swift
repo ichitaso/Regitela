@@ -57,6 +57,7 @@ func modifyGestaltExtra(_ change: (inout [String: Any]) throws -> Void) throws {
     try gestaltPlist.withAccess {
         var (dict, format) = try gestaltPlist.read()
         if !FileManager.default.fileExists(atPath: fullBackupURL.path) {
+            try FileManager.default.createDirectory(at: fullBackupURL.deletingLastPathComponent(), withIntermediateDirectories: true)
             try gestaltPlist.readData().write(to: fullBackupURL)
         }
         var extra = dict["CacheExtra"] as? [String: Any] ?? [:]
